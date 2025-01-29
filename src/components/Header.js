@@ -16,85 +16,73 @@ const Header = () => {
       id: 1,
       name: 'Beneficios',
       description: (
-        <>
-          <div className="columns-container">
-            {/* Columna 1 */}
-            <div className="column beneficios">
-              <h4>Mejora las habilidades en cualquier puesto y prospera al enfrentar el cambio</h4>
-              <p>Prepara a tus empleados para la IA generativa y otras clases de aceleración 
-                tecnológica con habilidades alineadas con el trabajo, perspectivas basadas en datos, 
-                y contenido y credenciales confiables.</p>
-              <ul>
-                <li>Cierra brechas en las habilidades</li>
-                <li>Desarrolla los talentos</li>
-                <li>Conserva los talentos</li>
-                <li>Vuelve a capacitar a los talentos</li>
-              </ul>
-              <a href="#vermas1" className="ver-mas-link">
-                Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
-              </a>
+          <>
+            <div className="company-info-content">
+              <section className="info-section">
+                <h2>Nosotros</h2>
+                <div className="blue-line"></div>
+                <p className="main-description">
+                  Impulsando el futuro digital de tus negocios
+                </p>
+                <p className="description-text">
+                  BPO IDOK es una empresa líder en la optimización de procesos de
+                  gestión, identificación digital y firma electrónica. Con una sólida
+                  presencia en Latinoamérica, ofrecemos soluciones tecnológicas
+                  adaptadas a las necesidades de nuestros clientes, garantizando
+                  seguridad, eficiencia y confianza en todos sus procesos
+                </p>
+                <p className="description-text">
+                  Nos enorgullece ofrecer nuestras soluciones en Perú, un país clave
+                  en la transformación digital de Latinoamérica. Con nuestra presencia
+                  y acreditación local, ayudamos a las empresas peruanas a optimizar
+                  sus procesos de forma segura, confiable y eficiente.
+                </p>
+              </section>
+
+              <section className="info-section">
+                <h2>Misión</h2>
+                <div className="blue-line"></div>
+                <p className="description-text">
+                  Ayudar a nuestros clientes a modelar, implementar, gestionar y
+                  optimizar sus procesos de negocio y operativos, relacionados con
+                  documentación y firma electrónica que permitan generar valor con
+                  confianza y seguridad.
+                </p>
+              </section>
+
+              <section className="info-section">
+                <h2>Visión</h2>
+                <div className="blue-line"></div>
+                <p className="description-text">
+                  Ser una empresa posicionada en el mercado por su profesionalismo,
+                  confiabilidad, seguridad y permanente innovación, aportando
+                  soluciones efectivas, valor sustentable y satisfacción a las
+                  necesidades de los clientes.
+                </p>
+              </section>
             </div>
-          </div>
-        </>
-      ),
-    },
-    {
-      id: 1,
-      name: 'Soluciones',
-      description: (
-        <>
-          <div className="columns-container">
-            <div className="column">
-              <span>Course builder</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>Integraciones</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>LevelSets</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>SkillSets</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>Panel de habilidades</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>Speex</span>
-              <p> Descripción breve</p>
-            </div>
-           
-          </div>
-          <a href="#vermas" className="ver-mas-link">
-              Ver más <span>&#8594;</span>
-          </a>
-        </>
+          </>
       ),
     },
     {
       id: 2,
       name: 'Beneficios',
       description: (
-        <>
-          <div className="columns-container">
-            {/* Columna 1 */}
-            <div className="column beneficios">
-              <h4>Fortalece la inserción laboral para atraer a un mayor número de estudiantes</h4>
-              <p>Capacita a los estudiantes con las habilidades más demandadas y prepáralos para 
-                alcanzar el éxito en el mundo laboral.</p>
-              <ul>
-                <li>Vincula planes de estudios a carreras profesionales</li>
-                <li>Mejora los resultados laborales</li>
-                <li>Mejora las experiencias de aprendizajes</li>
-                <li>Contenido de nivel mundial</li>
-              </ul>
-              <a href="#vermas1" className="ver-mas-link">
-                Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
+          <>
+            <div className="columns-container">
+              {/* Columna 1 */}
+              <div className="column beneficios">
+                <h4>Fortalece la inserción laboral para atraer a un mayor número de estudiantes</h4>
+                <p>Capacita a los estudiantes con las habilidades más demandadas y prepáralos para
+                  alcanzar el éxito en el mundo laboral.</p>
+                <ul>
+                  <li>Vincula planes de estudios a carreras profesionales</li>
+                  <li>Mejora los resultados laborales</li>
+                  <li>Mejora las experiencias de aprendizajes</li>
+                  <li>Contenido de nivel mundial</li>
+                </ul>
+                <a href="#vermas1" className="ver-mas-link">
+                  Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
               </a>
             </div>
           </div>
@@ -386,7 +374,7 @@ const Header = () => {
             <li 
                className={`nav-item ${activeMenuItem === 1 ? 'active' : ''}`} 
               onMouseEnter={() => handleMouseEnter(1)}
-            ><a href="#servicios"><span>Para</span>Empresas</a>
+            ><a href="#servicios">Nosotros</a>
             </li>
             <li 
                className={`nav-item ${activeMenuItem === 2 ? 'active' : ''}`} 
@@ -436,6 +424,7 @@ const Header = () => {
         <div className="option-menu">
           <ul>
             {services.map((service) => (
+
               <li className={`${service.id} ${activeMenuItem === service.id ? 'active' : ''}`} 
               key={service.id}>
                 <a 
