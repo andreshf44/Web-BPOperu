@@ -439,11 +439,11 @@ const Header = () => {
         </div>)}
 
 
-        <div className="content-option">
+        <div className={activeMenuItem === 1 ? "" : "content-option"}>
           {activeMenuItem === 1 ? (
-              <>
+              <div className="nosotros-content">
                 {services.find(service => service.id === 1 && service.name === 'Beneficios')?.description}
-              </>
+              </div>
           ) : (
               selectedService ? (
                   <>
