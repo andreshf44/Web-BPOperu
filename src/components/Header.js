@@ -66,7 +66,7 @@ const Header = () => {
     },
     {
       id: 2,
-      name: 'Beneficios',
+      name: 'Certificados digitales',
       description: (
           <>
             <div className="columns-container">
@@ -91,7 +91,7 @@ const Header = () => {
     },
     {
       id: 2,
-      name: 'Soluciones',
+      name: 'Firma remota',
       description: (
         <>
           <div className="columns-container">
@@ -128,8 +128,8 @@ const Header = () => {
       ),
     },
     {
-      id: 3,
-      name: 'Beneficios',
+      id: 2,
+      name: 'Sellos de tiempo',
       description: (
         <>
           <div className="columns-container">
@@ -153,8 +153,8 @@ const Header = () => {
       ),
     },
     {
-      id: 3,
-      name: 'Soluciones',
+      id: 2,
+      name: 'Acreditaciones',
       description: (
         <>
           <div className="columns-container">
@@ -191,8 +191,8 @@ const Header = () => {
       ),
     },
     {
-      id: 4,
-      name: 'Coursera',
+      id: 2,
+      name: 'Repositorio',
       description: (
         <>
           <div className="columns-container">
@@ -240,8 +240,8 @@ const Header = () => {
       ),
     },
     {
-      id: 4,
-      name: 'Speex',
+      id: 3,
+      name: 'Identificación digital',
       description: (
         <>
           <div className="columns-container">
@@ -282,8 +282,8 @@ const Header = () => {
       ),
     },
     {
-      id: 5,
-      name: 'Nosotros',
+      id: 3,
+      name: 'Procesos de negocio',
       description: (
         <>
           <div className="columns-container">
@@ -301,14 +301,47 @@ const Header = () => {
       ),
     },
     {
-      id: 5,
-      name: 'Contáctanos',
+      id: 3,
+      name: 'FirmaYa',
       description: (
         <>
           <div className="columns-container">
            
           </div>
         </>
+      ),
+    },
+    {
+      id: 3,
+      name: 'Gestor documental',
+      description: (
+          <>
+            <div className="columns-container">
+
+            </div>
+          </>
+      ),
+    },
+    {
+      id: 4,
+      name: 'Noticias',
+      description: (
+          <>
+            <div className="columns-container">
+
+            </div>
+          </>
+      ),
+    },
+    {
+      id: 4,
+      name: 'Contáctanos',
+      description: (
+          <>
+            <div className="columns-container">
+
+            </div>
+          </>
       ),
     },
   ];
@@ -362,7 +395,7 @@ const Header = () => {
       <div className="logo-container">
         {/* Cambiamos la imagen según el estado del scroll */}
         <img 
-          src={scrolled ? "/logo-scroll.png" : "/logo-first.png"} 
+          src={"idok-logo.png"}
           alt="Logo" 
           className="logo" 
         />
@@ -379,32 +412,32 @@ const Header = () => {
             <li 
                className={`nav-item ${activeMenuItem === 2 ? 'active' : ''}`} 
               onMouseEnter={() => handleMouseEnter(2)}
-            ><a href="#servicios"><span>Para</span>Universidades</a>
+            ><a href="#servicios">Servicios digitales <img src={"icono-flecha.png"} className={"flecha"}/></a>
             </li>
-            <li 
-               className={`nav-item ${activeMenuItem === 3 ? 'active' : ''}`} 
+            <li
+                className={`nav-item ${activeMenuItem === 3 ? 'active' : ''}`}
               onMouseEnter={() => handleMouseEnter(3)}
-            ><a href="#servicios"><span>Para</span>Gobierno</a>
+            ><a href="#servicios">Soluciones <img src={"icono-flecha.png"} className={"flecha"}/></a>
             </li>
             <li
                 className={`nav-item ${activeMenuItem === 4 ? 'active' : ''}`} 
                onMouseEnter={() => handleMouseEnter(4)}
-            ><a href="#paises">Soluciones</a>
+            ><a href="#servicios">Más <img src={"icono-flecha.png"} className={"flecha"}/></a>
             </li>
-            <li
-               className={`nav-item ${activeMenuItem === 5 ? 'active' : ''}`} 
-              onMouseEnter={() => handleMouseEnter(5)}
-            ><a href="#mas">Más</a></li>
+            {/*<li*/}
+            {/*   className={`nav-item ${activeMenuItem === 5 ? 'active' : ''}`}*/}
+            {/*  onMouseEnter={() => handleMouseEnter(5)}*/}
+            {/*><a href="#mas">Más</a></li>*/}
           </ul>
         </nav>
       )}
-      {scrolled && (
+      {/*scrolled && (
         <div  onClick={toggleCountriesList}>
           <div className="pais-section">
-          <i className="fas fa-globe"></i> {/* Icono del planeta */}
-          <i className="fas fa-chevron-down"></i> {/* Icono de la flecha hacia abajo */}
+          <i className="fas fa-globe"></i>
+          <i className="fas fa-chevron-down"></i>
           </div>
-            {/* Solo mostramos la lista si isCountriesVisible es true */}
+
       {isCountriesVisible && (
         <ul className="countries-list">
           <li>Argentina</li>
@@ -415,7 +448,7 @@ const Header = () => {
         </ul>
       )}
         </div>
-      )}
+      )*/}
 
     
 
