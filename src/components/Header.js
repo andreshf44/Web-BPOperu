@@ -421,31 +421,38 @@ const Header = () => {
 
       {/* Contenedor para las dos columnas */}
       <div className="container-menu">
-        <div className="option-menu">
+        {activeMenuItem !==1 && (<div className="option-menu">
           <ul>
             {services.map((service) => (
 
-              <li className={`${service.id} ${activeMenuItem === service.id ? 'active' : ''}`} 
-              key={service.id}>
-                <a 
-                 onClick={() => handleServiceClick(service)}
-                 className={activeService === service.name ? 'active' : ''} // Agrega la clase 'active'
-                >
-                  {service.name}
-                </a>
-              </li>
+                <li className={`${service.id} ${activeMenuItem === service.id ? 'active' : ''}`}
+                    key={service.id}>
+                  <a
+                      onClick={() => handleServiceClick(service)}
+                      className={activeService === service.name ? 'active' : ''} // Agrega la clase 'active'
+                  >
+                    {service.name}
+                  </a>
+                </li>
             ))}
           </ul>
-        </div>
+        </div>)}
+
 
         <div className="content-option">
-          {selectedService ? (
-            <>
-              <h3>{selectedService.name}</h3>
-              <p>{selectedService.description}</p>
-            </>
+          {activeMenuItem === 1 ? (
+              <>
+                {services.find(service => service.id === 1 && service.name === 'Beneficios')?.description}
+              </>
           ) : (
-            <p>Selecciona una opción para ver más detalles.</p>
+              selectedService ? (
+                  <>
+                    <h3>{selectedService.name}</h3>
+                    <p>{selectedService.description}</p>
+                  </>
+              ) : (
+                  <p>Selecciona una opción para ver más detalles.</p>
+              )
           )}
         </div>
       </div>
