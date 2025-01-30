@@ -71,83 +71,51 @@ const Header = () => {
           <>
             <div className="columns-container">
               {/* Columna 1 */}
-              <div className="column beneficios">
-                <h4>Fortalece la inserción laboral para atraer a un mayor número de estudiantes</h4>
-                <p>Capacita a los estudiantes con las habilidades más demandadas y prepáralos para
-                  alcanzar el éxito en el mundo laboral.</p>
+              <div className="column">
+                <h4>Para ciudadanos</h4>
                 <ul>
-                  <li>Vincula planes de estudios a carreras profesionales</li>
-                  <li>Mejora los resultados laborales</li>
-                  <li>Mejora las experiencias de aprendizajes</li>
-                  <li>Contenido de nivel mundial</li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Persona natural</a></li>
                 </ul>
-                <a href="#vermas1" className="ver-mas-link">
-                  Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
-              </a>
+              </div>
+              {/* Columna 2 */}
+              <div className="column">
+                <h4>Para empresas</h4>
+                <ul>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Representante legal</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Empleado</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Agente automatizado</a></li>
+                </ul>
+              </div>
+              {/* Columna 3 */}
+              <div className="column">
+                <h4>Para profesionales</h4>
+                <ul>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Abogado</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Contador</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Médico</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Otros profesionales</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </>
+          </>
       ),
     },
     {
       id: 2,
       name: 'Firma remota',
       description: (
-        <>
-          <div className="columns-container">
-            <div className="column">
-              <span>Course builder</span>
-              <p> Descripción breve</p>
+          <>
+            <div className="columns-container">
             </div>
-            <div className="column">
-              <span>Integraciones</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>LevelSets</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>SkillSets</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>Panel de habilidades</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>Speex</span>
-              <p> Descripción breve</p>
-            </div>
-           
-          </div>
-          <a href="#vermas" className="ver-mas-link">
-              Ver más <span>&#8594;</span>
-          </a>
-        </>
+          </>
       ),
     },
     {
       id: 2,
       name: 'Sellos de tiempo',
       description: (
-        <>
-          <div className="columns-container">
-            {/* Columna 1 */}
-            <div className="column beneficios">
-              <h4>Fortalece la inserción laboral para atraer a un mayor número de estudiantes</h4>
-              <p>Capacita a los estudiantes con las habilidades más demandadas y prepáralos para 
-                alcanzar el éxito en el mundo laboral.</p>
-              <ul>
-                <li>Vincula planes de estudios a carreras profesionales</li>
-                <li>Mejora los resultados laborales</li>
-                <li>Mejora las experiencias de aprendizajes</li>
-                <li>Contenido de nivel mundial</li>
-              </ul>
-              <a href="#vermas1" className="ver-mas-link">
-                Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
-              </a>
-            </div>
+          <>
+            <div className="columns-container">
           </div>
         </>
       ),
@@ -159,34 +127,22 @@ const Header = () => {
         <>
           <div className="columns-container">
             <div className="column">
-              <span>Course builder</span>
-              <p> Descripción breve</p>
+              <h4>Acreditaciones</h4>
+              <ul>
+                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Entidad de Certificación</a></li>
+                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Sello de Tiempo</a></li>
+                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Servicio de Valor Añadido</a></li>
+              </ul>
             </div>
+            {/* Columna 2 */}
             <div className="column">
-              <span>Integraciones</span>
-              <p> Descripción breve</p>
+              <h4>Reconocimiento</h4>
+              <ul>
+                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Firma remota</a></li>
+              </ul>
             </div>
-            <div className="column">
-              <span>LevelSets</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>SkillSets</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>Panel de habilidades</span>
-              <p> Descripción breve</p>
-            </div>
-            <div className="column">
-              <span>Speex</span>
-              <p> Descripción breve</p>
-            </div>
-           
+
           </div>
-          <a href="#vermas" className="ver-mas-link">
-              Ver más <span>&#8594;</span>
-          </a>
         </>
       ),
     },
@@ -194,89 +150,35 @@ const Header = () => {
       id: 2,
       name: 'Repositorio',
       description: (
-        <>
-          <div className="columns-container">
-            {/* Columna 1 */}
-            <div className="column">
-              <h4>Para Empresas</h4>
-              <ul>
-                <li>Generative AI Academy</li>
-                <li>Academia de Marketing</li>
-                <li>Academia de Finanzas</li>
-                <li>Academia de Datos</li>
-                <li>Academia de Tecnoloía</li>
-              </ul>
-              <a href="#vermas1" className="ver-mas-link">
-                Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
-              </a>
+          <>
+            <div className="columns-container">
+              <div className="column">
+                <h4>Entidad de Certificación</h4>
+                <ul>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política de Privacidad</a></li>
+                </ul>
+              </div>
+              {/* Columna 2 */}
+              <div className="column">
+                <h4>Autoridad de Sellado de Tiempo</h4>
+                <ul>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política de Privacidad</a></li>
+                </ul>
+              </div>
             </div>
-            {/* Columna 2 */}
-            <div className="column">
-              <h4>Para Universidades</h4>
-              <ul>
-                <li>Generative AI Coursera</li>
-                <li>Academic Integrity</li>
-                <li>Certificados Profesionales</li>
-              </ul>
-              <a href="#vermas2" className="ver-mas-link">
-                Ver más <span>&#8594;</span>
-              </a>
-            </div>
-            {/* Columna 3 */}
-            <div className="column">
-              <h4>Para Gobierno</h4>
-              <ul>
-                <li>Career Academy</li>
-                <li>Academia de Datos</li>
-                <li>Academia de Tecnología</li>
-                <li>Academia de Liderazgos</li>
-              </ul>
-              <a href="#vermas3" className="ver-mas-link">
-                Ver más <span>&#8594;</span>
-              </a>
-            </div>
-          </div>
-        </>
+          </>
       ),
     },
     {
       id: 3,
       name: 'Identificación digital',
       description: (
-        <>
-          <div className="columns-container">
-            {/* Columna 1 */}
-            <div className="column">
-              <h4>Core</h4>
-              <p>Descripción breve</p>
-              <a href="#vermas1" className="ver-mas-link">
-                Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
-              </a>
-            </div>
-            {/* Columna 2 */}
-            <div className="column">
-              <h4>Smart</h4>
-              <p>Descripción breve</p>
-              <a href="#vermas2" className="ver-mas-link">
-                Ver más <span>&#8594;</span>
-              </a>
-            </div>
-            {/* Columna 3 */}
-            <div className="column">
-              <h4>Expert</h4>
-              <p>Descripción breve</p>
-              <a href="#vermas3" className="ver-mas-link">
-                Ver más <span>&#8594;</span>
-              </a>
-            </div>
-            {/* Columna 4 */}
-            <div className="column">
-              <h4>Expert Pro</h4>
-              <p>Descripción breve</p>
-              <a href="#vermas3" className="ver-mas-link">
-                Ver más <span>&#8594;</span>
-              </a>
-            </div>
+          <>
+            <div className="columns-container">
           </div>
         </>
       ),
@@ -287,16 +189,7 @@ const Header = () => {
       description: (
         <>
           <div className="columns-container">
-            <h4>[Idea fuerza]</h4>
-            <p>
-            Nos asociamos con las mejores plataformas de aprendizaje del mundo para poder 
-            llevarte el mejor y más actualizado contenido con el fin de desarrollar las 
-            habilidades estratégicas que necesitas para enfrentar el futuro del mundo laboral.
-            </p>
           </div>
-          <a href="#vermas1" className="ver-mas-link">
-                Ver más <span>&#8594;</span> {/* Flecha hacia la derecha */}
-          </a>
         </>
       ),
     },
@@ -306,7 +199,6 @@ const Header = () => {
       description: (
         <>
           <div className="columns-container">
-           
           </div>
         </>
       ),
@@ -317,7 +209,6 @@ const Header = () => {
       description: (
           <>
             <div className="columns-container">
-
             </div>
           </>
       ),
@@ -328,7 +219,6 @@ const Header = () => {
       description: (
           <>
             <div className="columns-container">
-
             </div>
           </>
       ),
@@ -339,7 +229,6 @@ const Header = () => {
       description: (
           <>
             <div className="columns-container">
-
             </div>
           </>
       ),
@@ -453,8 +342,8 @@ const Header = () => {
     
 
       {/* Contenedor para las dos columnas */}
-      <div className="container-menu">
-        {activeMenuItem !==1 && (<div className="option-menu">
+      <div className={`container-menu ${activeMenuItem !== 1 ? 'expanded' : ''}`}>
+        {activeMenuItem !== 1 && (<div className="option-menu">
           <ul>
             {services.map((service) => (
 
@@ -482,6 +371,9 @@ const Header = () => {
                   <>
                     <h3>{selectedService.name}</h3>
                     <p>{selectedService.description}</p>
+                    <a href="#vermas" className="ver-mas-link">
+                      Ver más <span>&#8594;</span>
+                    </a>
                   </>
               ) : (
                   <p>Selecciona una opción para ver más detalles.</p>

@@ -1,5 +1,9 @@
 /* src/components/Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+* {
+  font-family: seravek-web, sans-serif;
+}
 .header {
   background-color: #ffffff;
   padding: 10px 0px;             /* Espaciado superior e inferior */
@@ -117,12 +121,13 @@
   padding: 0;
   gap: 124px;
   justify-content: flex-start;
-  .option-menu {
+  .option-menu { /* OPCIONES SUB MENU*/
     width: 300px;
     border-right: 1px solid #ededed;
     ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
       li {
         margin-bottom: 10px;
         height: 45px;
@@ -140,28 +145,51 @@
       }
       li:has(.active){
         background: #f6f6f6;
+        border: 1px solid #ededed;
       }
     }
   }
   .content-option {
     width: 65%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .ver-mas-link {
+      margin-top: auto;
+      align-self: flex-end;
+      padding-bottom: 50px;
+      text-decoration: none;
+      color: #5f5f5f;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
     h3 {
       text-align: left;
-      font-size: 25px;
-      font-weight: 600;
+      font-size: 24px;
+      font-weight: 400;
       margin-bottom: 0px;
+      color: #5f5f5f;
     }
     p{
       margin-top: 0;
       .columns-container {
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 20px;
         .column{
           margin-top: 20px;
           text-align: left;
+          flex: 1;
           a{
+            text-decoration: underline;
+            color: black;
+            text-decoration-color: #5f5f5f;
+            line-height: 20px;
+
             display: block;
             span{
               border-bottom:none;
@@ -171,18 +199,23 @@
         .column.beneficios{
           li{
             list-style-type: disc;
+            font-size: 12px;
           }
         }
         h4 {
           margin-top: 0;
+          color: #5f5f5f;
           text-align: left;
-          font-weight: 600;
+          font-weight: 500;
+          font-size: 16px;
         }
         ul {
           text-align: left;
           padding-left: 0;
           li{
             list-style-type: none;
+            font-size: 12px;
+            font-weight: 300;
           }
         }
         a{
@@ -200,10 +233,14 @@
   }
 }
 
+.container-menu.expanded {
+  height: 450px;
+}
+
 .header.scrolled.visible .container-menu {
   visibility: visible;
   opacity: 1;
-  padding: 20px;
+  padding: 0;
   transition:ease-in;
   .option-menu{
     li{
