@@ -372,11 +372,11 @@ const Header = () => {
                     <h3>{selectedService.name}</h3>
                     <p>{selectedService.description}</p>
                     <a href="#vermas" className="ver-mas-link">
-                      Ver más <span>&#8594;</span>
+                      Ver más <img src={"./flecha-ver-mas.png"} className={"flecha-ver-mas"} />
                     </a>
                   </>
               ) : (
-                  <p>Selecciona una opción para ver más detalles.</p>
+                  <p className={"placeholder-text"}>Selecciona una opción para ver más detalles.</p>
               )
           )}
         </div>

@@ -77,7 +77,7 @@
 
     li.active {
       background: #f6f6f6;
-      border: 1px solid #ededed;
+      border: 2px solid #ededed;
     }
 
     li.active:hover {
@@ -112,7 +112,7 @@
   opacity: 0;
   transition: all 0.3s ease;
   position: fixed;
-  border-top: 1px solid #ededed;
+  border-top: 2px solid #ededed;
   height: auto;
   width: 100vw;
   background: white;
@@ -120,10 +120,9 @@
   right: 0;
   padding: 0;
   gap: 124px;
-  justify-content: flex-start;
   .option-menu { /* OPCIONES SUB MENU*/
     width: 300px;
-    border-right: 1px solid #ededed;
+    border-right: 2px solid #ededed;
     ul {
       list-style-type: none;
       padding: 0;
@@ -133,11 +132,15 @@
         height: 45px;
         padding-top: 24px;
         a {
+          display: flex;
           text-decoration: none;
-          font-size: 18px;
+          height: auto;
+          padding-left: 50px;
+          font-size: 20px;
           font-weight: 300;
-          color: #5f5f5f;
+          color: #707070;
           cursor: pointer;
+          justify-content: flex-start;
         }
         li:hover {
           background: #f6f6f6;
@@ -145,7 +148,7 @@
       }
       li:has(.active){
         background: #f6f6f6;
-        border: 1px solid #ededed;
+        border: 2px solid #ededed;
       }
     }
   }
@@ -154,22 +157,29 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 100%;
+    .placeholder-text {
+      align-self: center;
+      color: #555555;
+      font-size: 25px;
+    }
 
     .ver-mas-link {
       margin-top: auto;
       align-self: flex-end;
       padding-bottom: 50px;
+      padding-right: 120px;
       text-decoration: none;
       color: #5f5f5f;
-      font-size: 12px;
-      font-weight: 500;
+      font-size: 17px;
+      font-weight: 600;
     }
 
     h3 {
       text-align: left;
-      font-size: 24px;
-      font-weight: 400;
+      font-size: 25px;
+      font-weight: 500;
       margin-bottom: 0px;
       color: #5f5f5f;
     }
@@ -186,10 +196,9 @@
           flex: 1;
           a{
             text-decoration: underline;
-            color: black;
-            text-decoration-color: #5f5f5f;
-            line-height: 20px;
-
+            color: #424242;
+            text-decoration-color: #999999;
+            line-height: 30px;
             display: block;
             span{
               border-bottom:none;
@@ -203,18 +212,19 @@
           }
         }
         h4 {
+          padding-top: 20px;
           margin-top: 0;
           color: #5f5f5f;
           text-align: left;
-          font-weight: 500;
-          font-size: 16px;
+          font-weight: 600;
+          font-size: 18px;
         }
         ul {
           text-align: left;
           padding-left: 0;
           li{
             list-style-type: none;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 300;
           }
         }
@@ -222,7 +232,7 @@
           display: flex;
         }
         span{
-          border-bottom: 1px solid black;
+          border-bottom: 2px solid black;
         }
       }
       a{
@@ -330,6 +340,12 @@
   width: 20px;
   height: 20px;
   vertical-align: middle;
+}
+
+.flecha-ver-mas {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
 }
 
 
