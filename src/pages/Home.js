@@ -7,11 +7,11 @@ const Home = () => {
 
 
   return (
-    <div className="home">
-      <div className="home-image">
-        {/* La imagen se establece mediante CSS */}
+      <div className="home">
+          <div className="home-image">
+              {/* La imagen se establece mediante CSS */}
+          </div>
       </div>
-    </div>
   );
 };
 

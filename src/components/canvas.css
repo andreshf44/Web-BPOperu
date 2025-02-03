@@ -1,0 +1,33 @@
+@keyframes moveToTop {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: translate(0%, -94%) scale(0.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0%, -94%) scale(0.1);
+        opacity: 0;
+
+    }
+}
+
+.canvas {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    display: block;
+    /* Agregamos un delay de 3s (o el tiempo que necesites según la duración de tu animación en Rive) */
+    animation: moveToTop 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 3s; /* Ajusta este valor según la duración de tu animación en Rive */
+}

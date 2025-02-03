@@ -10,7 +10,7 @@ const Header = () => {
   const [isCountriesVisible, setIsCountriesVisible] = useState(false);// Estado para manejar la visibilidad de la lista de países
 
   // Datos de los servicios
-  
+
   const services = [
     {
       id: 1,
@@ -264,7 +264,7 @@ const Header = () => {
   const handleMouseEnter = (menuId) => {
     setActiveMenuItem(menuId); // Establece el id del menú que está activo
     setIsMenuVisible(true);
-    setSelectedService(null); 
+    setSelectedService(null);
   };
 
   const handleMouseLeave = () => {
@@ -272,9 +272,9 @@ const Header = () => {
   };
 
   // Función para alternar la visibilidad de la lista de países
-  const toggleCountriesList = () => {
-    setIsCountriesVisible(!isCountriesVisible);
-  };
+  // const toggleCountriesList = () => {
+  //   setIsCountriesVisible(!isCountriesVisible);
+  // };
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''} ${isMenuVisible ? 'visible' : ''}`}
@@ -283,23 +283,23 @@ const Header = () => {
 
       <div className="logo-container">
         {/* Cambiamos la imagen según el estado del scroll */}
-        <img 
+        <img
           src={"idok-logo.png"}
-          alt="Logo" 
-          className="logo" 
+          alt="Logo"
+          className="logo"
         />
       </div>
 
       {scrolled && (  // Solo mostramos el menú cuando hay scroll
         <nav className="navbar">
           <ul>
-            <li 
-               className={`nav-item ${activeMenuItem === 1 ? 'active' : ''}`} 
+            <li
+               className={`nav-item ${activeMenuItem === 1 ? 'active' : ''}`}
               onMouseEnter={() => handleMouseEnter(1)}
             ><a href="#servicios">Nosotros</a>
             </li>
-            <li 
-               className={`nav-item ${activeMenuItem === 2 ? 'active' : ''}`} 
+            <li
+               className={`nav-item ${activeMenuItem === 2 ? 'active' : ''}`}
               onMouseEnter={() => handleMouseEnter(2)}
             ><a href="#servicios">Servicios digitales <img src={"icono-flecha.png"} className={"flecha"}/></a>
             </li>
@@ -309,7 +309,7 @@ const Header = () => {
             ><a href="#servicios">Soluciones <img src={"icono-flecha.png"} className={"flecha"}/></a>
             </li>
             <li
-                className={`nav-item ${activeMenuItem === 4 ? 'active' : ''}`} 
+                className={`nav-item ${activeMenuItem === 4 ? 'active' : ''}`}
                onMouseEnter={() => handleMouseEnter(4)}
             ><a href="#servicios">Más <img src={"icono-flecha.png"} className={"flecha"}/></a>
             </li>
@@ -339,7 +339,7 @@ const Header = () => {
         </div>
       )*/}
 
-    
+
 
       {/* Contenedor para las dos columnas */}
       <div className={`container-menu ${activeMenuItem !== 1 ? 'expanded' : ''}`}>
