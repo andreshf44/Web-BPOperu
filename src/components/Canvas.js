@@ -1,11 +1,22 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { initRive } from './splash';  // Nota que ahora importamos de 'splash' sin .js
 import './canvas.css';
 
 const Canvas = () => {
     const canvasRef = useRef(null);
+    const [scrolled, setScrolled] = useState(false);
+    const animationWasPlayed = useRef(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    }
 
     useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
         if (canvasRef.current) {
             const riveInstance = initRive(canvasRef.current);
 
@@ -15,11 +26,14 @@ const Canvas = () => {
                 }
             };
         }
+
     }, []);
 
     return (
-        <canvas ref={canvasRef} className="canvas"></canvas>
+        <canvas ref={canvasRef} className={`canvas ${scrolled ? 'scrolled' : ''}`}></canvas>
     );
+
+
 };
 
 export default Canvas;
