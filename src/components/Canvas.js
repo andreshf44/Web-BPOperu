@@ -5,7 +5,7 @@ import './canvas.css';
 const Canvas = () => {
     const canvasRef = useRef(null);
     const [scrolled, setScrolled] = useState(false);
-    const animationWasPlayed = useRef(false);
+    // const animationWasPlayed = useRef(false);
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
