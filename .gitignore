@@ -1,0 +1,6 @@
+# Ignorar los archivos generados por Babel
+node_modules/.cache/
+
+# Ignorar otros archivos de caché
+node_modules/.cache/default-development/
+.env
