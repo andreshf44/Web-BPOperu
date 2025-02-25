@@ -98,3 +98,5 @@ const TopicDetail = () => {
         </div>
     );
 };
+
+export default TopicDetail;
