@@ -1,11 +1,10 @@
 import React, {useEffect, useRef, useState} from 'react';
-import { initRive } from './splash';  // Nota que ahora importamos de 'splash' sin .js
+import { initRive } from './splash';
 import './canvas.css';
 
 const Canvas = () => {
     const canvasRef = useRef(null);
     const [scrolled, setScrolled] = useState(false);
-    // const animationWasPlayed = useRef(false);
 
     const handleScroll = () => {
         if (window.scrollY > 0) {

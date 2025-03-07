@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Components.css';  // Importamos los estilos de Header
+import { AppContext } from '../context/AppContext'; // Importamos el contexto
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false); // Estado para saber si hemos hecho scroll
@@ -8,6 +9,19 @@ const Header = () => {
   const [activeService, setActiveService] = useState(null); // Para gestionar el servicio activo
   const [activeMenuItem, setActiveMenuItem] = useState(null);
   const [isCountriesVisible, setIsCountriesVisible] = useState(false);// Estado para manejar la visibilidad de la lista de países
+
+  const { setHasScrolled, activateTopic } = useContext(AppContext);
+
+  const serviceToTopicMap = {
+    'Certificados digitales': 1,
+    'Firma remota': 2,
+    'Sellos de tiempo': 3,
+    'Acreditaciones': 4,
+    'Repositorio': 5,
+    'Identificación digital': 6,
+    // Añadir más mapeos según los topicServices disponibles en Home.js
+  };
+
 
   // Datos de los servicios
 
@@ -106,6 +120,9 @@ const Header = () => {
       description: (
           <>
             <div className="columns-container">
+              <p className={"descripcion-submenu"}>
+                Facilitamos la firma de documentos a distancia mediante plataformas seguras, lo que permite la validación jurídica de acuerdos y contratos sin necesidad de presencia física. Optimiza tiempos, reduce costos y mejora la eficiencia operativa.
+              </p>
             </div>
           </>
       ),
@@ -116,20 +133,23 @@ const Header = () => {
       description: (
           <>
             <div className="columns-container">
-          </div>
-        </>
+              <p className={"descripcion-submenu"}>
+                Garantizamos la integridad y autenticidad de documentos digitales mediante sellos de tiempo, protegiendo la información contra alteraciones y asegurando su validez a largo plazo en entornos electrónicos.
+              </p>
+            </div>
+          </>
       ),
     },
     {
       id: 2,
       name: 'Acreditaciones',
       description: (
-        <>
-          <div className="columns-container">
-            <div className="column">
-              <h4>Acreditaciones</h4>
-              <ul>
-                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Entidad de Certificación</a></li>
+          <>
+            <div className="columns-container">
+              <div className="column">
+                <h4>Acreditaciones</h4>
+                <ul>
+                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Entidad de Certificación</a></li>
                 <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Sello de Tiempo</a></li>
                 <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Servicio de Valor Añadido</a></li>
               </ul>
@@ -155,9 +175,9 @@ const Header = () => {
               <div className="column">
                 <h4>Entidad de Certificación</h4>
                 <ul>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política de Privacidad</a></li>
+                  <li><a href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/01-Politica-y-Declaraci%C3%B3n-de-Practicas-de-Certificacion-de-BPO.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
+                  <li><a href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
+                  <li><a href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"}>Política de Privacidad</a></li>
                 </ul>
               </div>
               {/* Columna 2 */}
@@ -179,25 +199,28 @@ const Header = () => {
       description: (
           <>
             <div className="columns-container">
-          </div>
-        </>
+              <p className={"descripcion-submenu"}>
+                Implementamos soluciones avanzadas para autenticar y verificar la identidad de personas en entornos digitales, asegurando procesos de validación rápidos, seguros y fáciles de integrar en cualquier plataforma.
+              </p>
+            </div>
+          </>
       ),
     },
     {
       id: 3,
       name: 'Procesos de negocio',
       description: (
-        <>
-          <div className="columns-container">
-          </div>
-        </>
+          <>
+            <div className="columns-container">
+            </div>
+          </>
       ),
     },
     {
       id: 3,
       name: 'FirmaYa',
       description: (
-        <>
+          <>
           <div className="columns-container">
           </div>
         </>
@@ -235,12 +258,15 @@ const Header = () => {
     },
   ];
 
+
   // Función que se llama cada vez que el usuario hace scroll
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setScrolled(true);  // Si se hizo scroll hacia abajo más de 50px, mostramos el logo scroll
+      setHasScrolled(true)
     } else {
       setScrolled(false); // Si estamos en la parte superior, mostramos el logo inicial
+      setHasScrolled(false);
     }
   };
 
@@ -275,6 +301,16 @@ const Header = () => {
   // const toggleCountriesList = () => {
   //   setIsCountriesVisible(!isCountriesVisible);
   // };
+
+  // Nueva función para manejar el clic en "Ver más"
+  const handleVerMasClick = (e) => {
+    e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+
+    if (selectedService && serviceToTopicMap[selectedService.name]) {
+      // Activamos el topic correspondiente en Home
+      activateTopic(serviceToTopicMap[selectedService.name]);
+    }
+  };
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''} ${isMenuVisible ? 'visible' : ''}`}
@@ -371,7 +407,7 @@ const Header = () => {
                   <>
                     <h3>{selectedService.name}</h3>
                     <p>{selectedService.description}</p>
-                    <a href="#vermas" className="ver-mas-link">
+                    <a href="#vermas" className="ver-mas-link" onClick={handleVerMasClick}>
                       Ver más <img src={"./flecha-ver-mas.png"} className={"flecha-ver-mas"} />
                     </a>
                   </>
