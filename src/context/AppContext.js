@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useRef } from 'react';
 
 export const AppContext = createContext();
 
@@ -12,17 +12,32 @@ export const AppProvider = ({ children }) => {
     // Estado para controlar si se debe mostrar el detalle en Home
     const [showTopicDetail, setShowTopicDetail] = useState(false);
 
+    // Referencia para controlar si hay una transición en curso
+    const isTransitioning = useRef(false);
+
     // Función para activar un topic específico en Home
     const activateTopic = (topicId) => {
         setActiveTopicId(topicId);
         setShowTopicDetail(true);
-
         setHasScrolled(true);
     };
 
     // Función para desactivar la visualización del topic
+    // Esta función ahora solo cambia el estado showTopicDetail
+    // La lógica de transición se maneja en el componente Home
     const deactivateTopic = () => {
+        if (isTransitioning.current) return;
+
+        isTransitioning.current = true;
+
+        // Primero cambiamos el showTopicDetail para iniciar la animación en Home
         setShowTopicDetail(false);
+
+        // Después de que termine la transición (2 segundos), limpiamos el activeTopicId
+        setTimeout(() => {
+            // Reestablecemos el estado de transición
+            isTransitioning.current = false;
+        }, 2000);
     };
 
     // Valores y funciones que queremos compartir entre componentes

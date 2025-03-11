@@ -6,18 +6,31 @@ import topicServices from "../data/topicContent";
 
 const Home = () => {
     const { hasScrolled, activeTopicId, showTopicDetail, deactivateTopic } = useContext(AppContext);
-
     const [activeTabIndex, setActiveTabIndex] = useState(0);
+    const [isTopicFadingOut, setIsTopicFadingOut] = useState(false);
+    const [isHomeImageVisible, setIsHomeImageVisible] = useState(true);
 
     // Función para cambiar la pestaña activa
     const handleTabClick = (index) => {
         setActiveTabIndex(index);
     };
 
+    useEffect(() => {
+        if (showTopicDetail) {
+            // Cuando se muestra un topic, ocultamos la imagen de inicio
+            setIsHomeImageVisible(false);
+            setIsTopicFadingOut(false);
+        } else if (!showTopicDetail && isTopicFadingOut) {
+            // Cuando termina la transición de salida del topic
+            setIsTopicFadingOut(false);
+        }
+    }, [showTopicDetail, isTopicFadingOut]);
+
     // Reiniciamos la pestaña activa cuando cambia el topic
     useEffect(() => {
         setActiveTabIndex(0);
     }, [activeTopicId]);
+
 
     // Función para obtener las pestañas según el topic activo
     const getActiveTabs = () => {
@@ -82,16 +95,36 @@ const Home = () => {
         return topicServices.find(topic => topic.id === activeTopicId);
     };
 
+    const handleTopicClose = () => {
+        if (showTopicDetail) {
+            setIsTopicFadingOut(true);
+            // Esperamos a que termine la animación antes de ocultar realmente el topic
+            setTimeout(() => {
+                setIsHomeImageVisible(true);
+                deactivateTopic();
+            }, 1000);
+        }
+    };
+
+    // Añadimos este useEffect para detectar cuando se hace clic en el logo en Header.js
+    useEffect(() => {
+        // Si estaba mostrando un topic y ahora no, entonces se hizo clic en el logo
+        if (!showTopicDetail && activeTopicId) {
+            setIsHomeImageVisible(true);
+        }
+    }, [showTopicDetail, activeTopicId]);
+
     return (
         <div className={`home ${hasScrolled && showTopicDetail ? 'show-topic-detail' : ''}`}>
-            {hasScrolled && showTopicDetail && getActiveTopic() ? (
-                <div className="topic-detail-overlay">
+            {/* Siempre renderizamos la imagen de fondo, pero controlamos su visibilidad con CSS */}
+            <div className={`home-image ${!isHomeImageVisible ? 'hidden' : ''}`}>
+                {/* La imagen se establece mediante CSS */}
+            </div>
+
+            {/* Renderizamos el topic detail si está activo o está en transición de salida */}
+            {hasScrolled && (showTopicDetail || isTopicFadingOut) && getActiveTopic() && (
+                <div className={`topic-detail-overlay ${isTopicFadingOut ? 'fade-out' : ''}`}>
                     {renderTopicDetail(getActiveTopic())}
-                </div>
-            ) : (
-                // Contenido normal de Home cuando no hay un topic activo o no hay scroll
-                <div className="home-image">
-                    {/* La imagen se establece mediante CSS */}
                 </div>
             )}
         </div>

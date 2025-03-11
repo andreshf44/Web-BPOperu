@@ -3,6 +3,7 @@ import './Components.css';  // Importamos los estilos de Header
 import { AppContext } from '../context/AppContext'; // Importamos el contexto
 
 const Header = () => {
+  const { deactivateTopic } = useContext(AppContext);
   const [scrolled, setScrolled] = useState(false); // Estado para saber si hemos hecho scroll
   const [selectedService, setSelectedService] = useState(null); // Estado para almacenar el servicio seleccionado
   const [isMenuVisible, setIsMenuVisible] = useState(false); // Estado para controlar la visibilidad del menu
@@ -320,19 +321,21 @@ const Header = () => {
       <div className="logo-container">
         {/* Cambiamos la imagen según el estado del scroll */}
         <img
-          src={"idok-logo.png"}
-          alt="Logo"
-          className="logo"
+            src={"idok-logo.png"}
+            alt="Logo"
+            className="logo"
+            onClick={deactivateTopic}  // Esta función ahora iniciará la transición de fade out
+            style={{cursor: 'pointer'}}
         />
       </div>
 
       {scrolled && (  // Solo mostramos el menú cuando hay scroll
-        <nav className="navbar">
-          <ul>
-            <li
-               className={`nav-item ${activeMenuItem === 1 ? 'active' : ''}`}
-              onMouseEnter={() => handleMouseEnter(1)}
-            ><a href="#servicios">Nosotros</a>
+          <nav className="navbar">
+            <ul>
+              <li
+                  className={`nav-item ${activeMenuItem === 1 ? 'active' : ''}`}
+                  onMouseEnter={() => handleMouseEnter(1)}
+              ><a href="#servicios">Nosotros</a>
             </li>
             <li
                className={`nav-item ${activeMenuItem === 2 ? 'active' : ''}`}

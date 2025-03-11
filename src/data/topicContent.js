@@ -98,13 +98,33 @@ export const repositorioContent = [
         title: "Entidad de Certificación",
         content: (
             <ul>
-                <li><a
+                <li>
+                    <img
+                        src={"pdf_logo.png"}
+                        alt="PDF"
+                        className="pdf-logo"
+                    />
+                    <a
                     href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/01-Politica-y-Declaraci%C3%B3n-de-Practicas-de-Certificacion-de-BPO.pdf"}
                     target={"_blank"}>Política y Declaración de Prácticas</a></li>
-                <li><a
+                <li>
+                    <img
+                        src={"pdf_logo.png"}
+                        alt="PDF"
+                        className="pdf-logo"
+                    />
+                    <a
                     href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"}
                     target={"_blank"}>Política y Plan de Seguridad</a></li>
-                <li><a href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"}>Política de Privacidad</a></li>
+                <li>
+                    <img
+                        src={"pdf_logo.png"}
+                        alt="PDF"
+                        className="pdf-logo"
+                    />
+                    <a
+                        href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"}
+                        target={"_blank"}>Política de Privacidad</a></li>
             </ul>
         )
     },
@@ -112,15 +132,33 @@ export const repositorioContent = [
         title: "Sellado de Tiempo",
         content: (
             <ul>
-                <li><a
-                    href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/TSA/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"}
-                    target={"_blank"}>Política y Declaración de Prácticas</a></li>
-                <li><a
-                    href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"}
-                    target={"_blank"}>Política y Plan de Seguridad</a></li>
-                <li><a
-                    href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"}
-                    target={"_blank"}>Política de Privacidad</a></li>
+                <li>
+                    <img
+                        src={"pdf_logo.png"}
+                        alt="PDF"
+                        className="pdf-logo"
+                    />
+                    <a
+                        href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/TSA/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"}
+                        target={"_blank"}>Política y Declaración de Prácticas</a></li>
+                <li>
+                    <img
+                        src={"pdf_logo.png"}
+                        alt="PDF"
+                        className="pdf-logo"
+                    />
+                    <a
+                        href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"}
+                        target={"_blank"}>Política y Plan de Seguridad</a></li>
+                <li>
+                    <img
+                        src={"pdf_logo.png"}
+                        alt="PDF"
+                        className="pdf-logo"
+                    />
+                    <a
+                        href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"}
+                        target={"_blank"}>Política de Privacidad</a></li>
             </ul>
         )
     },

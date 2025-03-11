@@ -14,9 +14,16 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 96%;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
-/*   TopicDetail Scc  */
+/* Clase para animar la imagen cuando está oculta */
+.home-image.hidden {
+    opacity: 0;
+}
+
+/*   TopicDetail CSS  */
 
 .home.show-topic-detail {
     position: relative;
@@ -31,6 +38,13 @@
     background-color: white;
     overflow-y: auto;
     padding-top: 80px; /* Espacio para el header */
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* Clase para la transición de salida */
+.topic-detail-overlay.fade-out {
+    opacity: 0;
 }
 
 
@@ -118,18 +132,28 @@
                 }
                 ul{
                     padding-left: 15px;
+                    align-content: center;
                 }
                 li{
+                    display: flex;
+                    align-items: center;
                     line-height: 25px;
                     font-size: 16px;
+                    list-style-type: none;
+                    padding-bottom: 10px;
                 }
                 span{
                     font-weight: bold;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .pdf-logo{
+                    width: 18px;
+                    padding-right: 12px;
                 }
             }
         }
     }
 }
-
-
-
