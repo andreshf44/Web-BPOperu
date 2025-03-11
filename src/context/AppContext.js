@@ -1,7 +1,5 @@
-// src/context/AppContext.js
 import React, { createContext, useState } from 'react';
 
-// Creamos un contexto para compartir datos entre componentes
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
@@ -19,8 +17,6 @@ export const AppProvider = ({ children }) => {
         setActiveTopicId(topicId);
         setShowTopicDetail(true);
 
-        // No hacemos scroll aquí para mantener la posición actual
-        // Solo aseguramos que hasScrolled esté en true para que se muestre el detalle
         setHasScrolled(true);
     };
 

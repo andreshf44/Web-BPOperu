@@ -16,7 +16,8 @@
     height: 96%;
 }
 
-/* Estilos para el modo de visualización de topic */
+/*   TopicDetail Scc  */
+
 .home.show-topic-detail {
     position: relative;
 }
@@ -32,14 +33,7 @@
     padding-top: 80px; /* Espacio para el header */
 }
 
-.container-detail {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
 
-/* Estilos para el botón de cerrar */
 .container-detail {
     display: block;
     left: 0;
@@ -94,99 +88,6 @@
     }
     .second-section {
         .left-side{
-            background: #F5F5FC;
-            flex: 0 0 21%;
-            text-align: left;
-            padding-left: 58px;
-            ul{
-                padding-left: 0;
-                padding-top: 15px;
-                li {
-                    padding: 9px 19px;
-                    border-left: 4px solid #D6D6D6;
-                    list-style-type: none;
-                    color: #5F5F5F;
-                    cursor: pointer;
-                }
-            }
-        }
-        .right-side{
-            text-align: left;
-            padding: 0px 61px;
-            .information{
-                margin-bottom: 55px;
-                padding-right: 39px;
-                h3{
-                    padding-top: 40px;
-                }
-                p{
-                    width: auto;
-                }
-            }
-        }
-    }
-}
-
-/*   TopicDetail Scc  */
-
-.header.scrolled ~ .container-detail {
-    display: block;
-}
-.container-detail {
-    display: block;
-    left: 0;
-    position: absolute;
-    top: 72px;
-    background: #fff;
-    padding-top: 58px;
-    width: 100%;
-    h3{
-        margin-top: 5px;
-        margin-bottom: 0;
-        font-size: 34px;
-        font-weight: 100;
-        color: #5f5f5f;
-    }
-    p{
-        width: 580px;
-        color: #5f5f5f;
-        line-height: 1.3;
-    }
-    .first-section, .second-section {
-        display: flex;
-    }
-    .first-section{
-        display: flex;
-        padding-left: 58px;
-        padding-bottom: 55px;
-        border-bottom: 2px solid #F5F5FC;
-        .left-side {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            flex: 0 0 60%;
-            align-items: flex-start;
-            text-align: left;
-            button{
-                border-radius: 5px;
-                border: none;
-                background: #4B69B2;
-                color: #ffff;
-                padding: 12px 29px;
-                font-size: 16px;
-                cursor: pointer;
-            }
-        }
-        .right-side {
-            img{
-                width: 65%;
-                height: -webkit-fill-available;
-            }
-        }
-    }
-    .second-section {
-        .left-side{
-            height: 125vh;
             background: #F5F5FC;
             flex: 0 0 21%;
             text-align: left;
@@ -220,7 +121,7 @@
                 }
                 li{
                     line-height: 25px;
-                  font-size: 16px;
+                    font-size: 16px;
                 }
                 span{
                     font-weight: bold;
@@ -229,3 +130,6 @@
         }
     }
 }
+
+
+
