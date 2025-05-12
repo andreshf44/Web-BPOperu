@@ -20,6 +20,7 @@ const Header = () => {
     'Acreditaciones': 4,
     'Repositorio': 5,
     'Identificación digital': 6,
+    'Sobre nosotros': 7,
     // Añadir más mapeos según los topicServices disponibles en Home.js
   };
 
@@ -150,16 +151,16 @@ const Header = () => {
               <div className="column">
                 <h4>Acreditaciones</h4>
                 <ul>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Entidad de Certificación</a></li>
-                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Sello de Tiempo</a></li>
-                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Servicio de Valor Añadido</a></li>
+                  <li><a href={"/docs/111-AcreditaciónECdeBPO.pdf"} target={"_blank"}>Entidad de Certificación</a></li>
+                <li><a href={"/docs/RESOLUCION 125-AcreditacionTSABPO[F] .pdf"} target={"_blank"}>Sello de Tiempo</a></li>
+                <li><a href={"/docs/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"} target={"_blank"}>Servicio de Valor Añadido</a></li>
               </ul>
             </div>
             {/* Columna 2 */}
             <div className="column">
               <h4>Reconocimiento</h4>
               <ul>
-                <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Firma remota</a></li>
+                <li><a href={"/docs/360- AcreditaciónFRemotadeBPO.pdf"} target={"_blank"}>Firma remota</a></li>
               </ul>
             </div>
 
@@ -176,18 +177,18 @@ const Header = () => {
               <div className="column">
                 <h4>Entidad de Certificación</h4>
                 <ul>
-                  <li><a href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/01-Politica-y-Declaraci%C3%B3n-de-Practicas-de-Certificacion-de-BPO.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
-                  <li><a href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
-                  <li><a href={"https://bpoperu.idok.cl/wordpress/wp-content/uploads/2024/02/EC/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"}>Política de Privacidad</a></li>
+                  <li><a href={"/docs/01-Politica-y-Declaración-de-Practicas-de-Certificacion-de-BPO.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
+                  <li><a href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
+                  <li><a href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"}>Política de Privacidad</a></li>
                 </ul>
               </div>
               {/* Columna 2 */}
               <div className="column">
                 <h4>Autoridad de Sellado de Tiempo</h4>
                 <ul>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Política de Privacidad</a></li>
+                  <li><a href={"/docs/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"} target={"_blank"}>Política y Declaración de Prácticas</a></li>
+                  <li><a href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"}>Política y Plan de Seguridad</a></li>
+                  <li><a href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"}>Política de Privacidad</a></li>
                 </ul>
               </div>
             </div>
@@ -218,31 +219,15 @@ const Header = () => {
       ),
     },
     {
-      id: 3,
-      name: 'FirmaYa',
-      description: (
-          <>
-          <div className="columns-container">
-          </div>
-        </>
-      ),
-    },
-    {
-      id: 3,
-      name: 'Gestor documental',
-      description: (
-          <>
-            <div className="columns-container">
-            </div>
-          </>
-      ),
-    },
-    {
       id: 4,
-      name: 'Noticias',
+      name: 'Sobre nosotros',
       description: (
           <>
             <div className="columns-container">
+              <p className={"descripcion-submenu"}>
+                BPO IDOK es una empresa líder en la optimización de procesos de gestión, identificación digital y firma electrónica. Con una sólida presencia en Latinoamérica, ofrecemos soluciones tecnológicas adaptadas a las necesidades de nuestros clientes, garantizando seguridad, eficiencia y confianza en todos sus procesos.
+              </p>
+
             </div>
           </>
       ),
@@ -252,7 +237,13 @@ const Header = () => {
       name: 'Contáctanos',
       description: (
           <>
-            <div className="columns-container">
+            <div className="columns-container contacto-menu">
+              <p className={"descripcion-submenu"}>
+                Agenda una cita con nosotros para conocer más sobre nuestros servicios.
+              </p>
+              <button className={"boton-agenda"}>
+                Agenda Ahora
+              </button>
             </div>
           </>
       ),
@@ -307,9 +298,20 @@ const Header = () => {
   const handleVerMasClick = (e) => {
     e.preventDefault(); // Previene el comportamiento predeterminado del enlace
 
-    if (selectedService && serviceToTopicMap[selectedService.name]) {
-      // Activamos el topic correspondiente en Home
-      activateTopic(serviceToTopicMap[selectedService.name]);
+    if (selectedService) {
+      if (selectedService.name === 'Sobre nosotros') {
+        // Si es "Sobre nosotros", activamos específicamente el menú 1
+        handleMouseEnter(1);
+        setActiveMenuItem(1);
+
+        // Si ya tienes un topic específico para "Nosotros", actívalo
+        // Por ejemplo, si "Nosotros" corresponde al topic ID 0
+        activateTopic(0);
+
+      } else if (serviceToTopicMap[selectedService.name]) {
+        // Para otros servicios, activamos el topic correspondiente
+        activateTopic(serviceToTopicMap[selectedService.name]);
+      }
     }
   };
 

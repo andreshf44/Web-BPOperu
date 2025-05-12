@@ -1,0 +1,15 @@
+.demo-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    .demo-button {
+        font-family: seravek-web, sans-serif;
+        background: #4b69b2;
+        color: white;
+        font-size: 20px;
+        padding: 15px 30px;
+        border-radius: 10px;
+    }
+}

@@ -84,6 +84,12 @@ const Home = () => {
                                 </div>
                             ))
                         }
+
+                        {topic.buttonComponent && (
+                            <div className='information button-container'>
+                                {topic.buttonComponent}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@
   justify-content: center;     
   align-items: center;  
   .logo {
-    width: 90px;                 
+    width: 140px;
     height: auto;                
     transition: 0.3s;
   }       
@@ -243,6 +243,20 @@
         }
         span{
           border-bottom: 2px solid black;
+        }
+      }
+      .contacto-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .boton-agenda {
+          font-family: seravek-web, sans-serif;
+          width: 250px;
+          background: #4b69b2;
+          color: white;
+          font-size: 20px;
+          padding: 15px 30px;
+          border-radius: 10px;
         }
       }
       a{
