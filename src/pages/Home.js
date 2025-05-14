@@ -3,6 +3,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import './Home.css';
 import { AppContext } from '../context/AppContext';
 import topicServices from "../data/topicContent";
+import HomeContent from '../components/HomeContent';
 
 const Home = () => {
     const { hasScrolled, activeTopicId, showTopicDetail, deactivateTopic } = useContext(AppContext);
@@ -122,10 +123,15 @@ const Home = () => {
 
     return (
         <div className={`home ${hasScrolled && showTopicDetail ? 'show-topic-detail' : ''}`}>
-            {/* Siempre renderizamos la imagen de fondo, pero controlamos su visibilidad con CSS */}
-            <div className={`home-image ${!isHomeImageVisible ? 'hidden' : ''}`}>
-                {/* La imagen se establece mediante CSS */}
-            </div>
+            {!hasScrolled && (
+                <div className={`home-image ${!isHomeImageVisible ? 'hidden' : ''}`}>
+                </div>
+            )}
+            {hasScrolled && !showTopicDetail && (
+                <div className={`home-content-wrapper ${!isHomeImageVisible ? 'hidden' : ''}`}>
+                    <HomeContent />
+                </div>
+            )}
 
             {/* Renderizamos el topic detail si está activo o está en transición de salida */}
             {hasScrolled && (showTopicDetail || isTopicFadingOut) && getActiveTopic() && (
