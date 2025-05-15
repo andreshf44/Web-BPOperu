@@ -1,17 +1,25 @@
 // src/components/HomeContent.js
-import React from 'react';
+import React, { useContext} from 'react';
 import './HomeContent.css';
+import { AppContext } from '../context/AppContext';
 
 const HomeContent = () => {
+    const { activateTopic } = useContext(AppContext);
+
+    const handleKnowMoreClick = (topicId) => (e) => {
+        e.preventDefault();
+        activateTopic(topicId);
+    };
+
     return (
-        <div className={"home-content-container"} >
+        <div className={"home-content-container"}>
             <div className="home-first-section">
                 <h2>Protege tus procesos con nuestras <br/>
                     soluciones avanzadas de firma <br/>
                     electrónica y digital.
                 </h2>
                 <button>
-                    <a href="#">Descubre nuestras soluciones</a>
+                    <a href="#go-to-selection">Descubre nuestras soluciones</a>
                 </button>
             </div>
 
@@ -43,12 +51,12 @@ const HomeContent = () => {
                 </div>
                 <div className={"help-button"}>
                     <button>
-                        <a href="#">Podemos ayudarte</a>
+                        <a href="#go-to-selection">Podemos ayudarte</a>
                     </button>
                 </div>
             </div>
 
-            <div className={"home-third-section"}>
+            <div className={"home-third-section"} id={"go-to-selection"}>
                 <div className={"content-third-section"}>
                     <h2>
                         Transforma tu forma de trabajar <br/>con nuestras soluciones
@@ -59,7 +67,7 @@ const HomeContent = () => {
                                 <h3>Firma digital y certificados digitales</h3>
                                 <p> Seguridad y validez legal en cada documento.</p>
                                 <button>
-                                    <a href="#">Conocer más</a>
+                                    <a href="#certificados-digitales" onClick={handleKnowMoreClick(1)}>Conocer más</a>
                                 </button>
                             </div>
                             <div className={"bulletin-image"}>
@@ -71,7 +79,7 @@ const HomeContent = () => {
                                 <h3>Firma remota</h3>
                                 <p> Firma documentos desde cualquier lugar y dispositivo.</p>
                                 <button>
-                                    <a href="#">Conocer más</a>
+                                    <a href="#firma-remota" onClick={handleKnowMoreClick(2)}>Conocer más</a>
                                 </button>
                             </div>
                             <div className={"bulletin-image"}>
@@ -83,7 +91,7 @@ const HomeContent = () => {
                                 <h3>Identificación digital</h3>
                                 <p> Verifica identidades y evita fraudes. </p>
                                 <button>
-                                    <a href="#">Conocer más</a>
+                                    <a href="#identificacion-digital" onClick={handleKnowMoreClick(6)}>Conocer más</a>
                                 </button>
                             </div>
                             <div className={"bulletin-image"}>
@@ -95,7 +103,7 @@ const HomeContent = () => {
                                 <h3>Sellado de tiempo</h3>
                                 <p> Protege documentos con fecha y hora certificada. </p>
                                 <button>
-                                    <a href="#">Conocer más</a>
+                                    <a href="#sellos-de-tiempo" onClick={handleKnowMoreClick(3)}>Conocer más</a>
                                 </button>
                             </div>
                             <div className={"bulletin-image"}>
@@ -107,7 +115,7 @@ const HomeContent = () => {
                                 <h3>Optimización de procesos</h3>
                                 <p>Automatiza y digitaliza la gestión documental. </p>
                                 <button>
-                                    <a href="#">Conocer más</a>
+                                    <a href="#procesos-de-negocio" onClick={handleKnowMoreClick(7)}>Conocer más</a>
                                 </button>
                             </div>
                             <div className={"bulletin-image"}>
@@ -119,7 +127,12 @@ const HomeContent = () => {
                     </div>
                 </div>
             </div>
-
+            <footer>
+                <div className="footer-content">
+                    <img src="idok-logo-white.png" alt="IDOK Logo"/>
+                    <p>© 2025 · <a href="https://mail.google.com/mail/?view=cm&fs=1&to=soporte@idok.cl" target="_blank" rel="noopener noreferrer" >soporte@idok.cl</a></p>
+                </div>
+            </footer>
         </div>
 
     );

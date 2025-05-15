@@ -162,3 +162,29 @@
         }
     }
 }
+
+footer {
+    background-color: #4b69b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 500px;
+        img {
+            width: 50%;
+            height: auto;
+        }
+        p {
+            color: white;
+            font-size: 20px;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -250,6 +250,9 @@
         flex-direction: column;
         justify-content: flex-start;
         .boton-agenda {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           font-family: seravek-web, sans-serif;
           width: 250px;
           background: #4b69b2;
@@ -257,6 +260,10 @@
           font-size: 20px;
           padding: 15px 30px;
           border-radius: 10px;
+          a {
+            color: white;
+            text-decoration: none;
+          }
         }
       }
       a{

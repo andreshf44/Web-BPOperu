@@ -331,9 +331,51 @@ export const identificacionDigitalContent = [
         content: (
             <ul>
                 <li><span>Verificación de identidad de Banca en línea</span>:  Los bancos y las instituciones financieras utilizan nuestra solución de identificación digital para verificar la identidad de los clientes antes de aprobar un préstamo online, reduciendo el riesgo de fraude y asegurando la seguridad de las transacciones.</li>
-                <li><span>Autenticación de usuarios en Fintech</span>:  Las empresas fintech utilizan nuestra solución de identificación digital para autenticar a los usuarios y prevenir fraudes en transacciones digitales, protegiendo a los clientes y a la empresa de posibles pérdidas financieras.</li>
+                <li><span>Autenticación de usuarios en Fintech</span>: Las empresas fintech utilizan nuestra solución de identificación digital para autenticar a los usuarios y prevenir fraudes en transacciones digitales, protegiendo a los clientes y a la empresa de posibles pérdidas financieras.</li>
             </ul>
         )
+    }
+]
+
+export const procesosDeNegocioContent = [
+    {
+        title: "Características",
+        content: (
+            <>
+                <p>
+                    Automatiza, agiliza y gestiona documentos digitales con facilidad.
+                    <br/>
+                    Las características principales de este servicio son:
+                </p>
+
+                <ul>
+                    <li>Plataforma de firma electrónica corporativa.</li>
+                    <li>Firma remota con validación legal.</li>
+                    <li>Integración con API para automatización de procesos.</li>
+                    <li>Gestor de documentos con almacenamiento seguro.</li>
+                </ul>
+            </>
+        )
+    },
+    {
+        title: "Beneficios",
+        content: (
+            <ul>
+                <li><span>Agilidad</span>:  Agiliza procesos internos y externos.</li>
+                <li><span>Eficiencia</span>: Reduce errores y tiempos de espera.</li>
+                <li><span>Organización</span>: Mejor organización y control de documentos digitales.</li>
+            </ul>
+        )
+    },
+    {
+        title: "Casos de uso",
+        content: (
+            <ul>
+                <li>Empresas que automatizan la firma de contratos con proveedores, reduciendo errores y tiempos de espera.</li>
+                <li>Despachos legales que gestionan documentos digitales de forma centralizada y segura.</li>
+            </ul>
+        )
+
     }
 ]
 
@@ -343,6 +385,7 @@ export const sellosTabs = sellosContent.map(item => item.title);
 export const acreditacionesTabs = acreditacionesContent.map(item => item.title);
 export const repositorioTabs = repositorioContent.map(item => item.title);
 export const identificacionDigitalTabs = identificacionDigitalContent.map(item => item.title);
+export const procesosDeNegocioTabs = procesosDeNegocioContent.map(item => item.title);
 
 export const topicServices = [
     {
@@ -389,6 +432,14 @@ export const topicServices = [
         description: "Implementamos soluciones avanzadas para autenticar y verificar la identidad de personas en entornos digitales, asegurando procesos de validación rápidos, seguros y fáciles de integrar en cualquier plataforma.",
         tabs: identificacionDigitalTabs,
         content: identificacionDigitalContent,
+        buttonComponent: <DemoButton />
+    },
+    {
+        id: 7,
+        title: "Optimización de procesos",
+        description: "Plataformas y herramientas para digitalizar, firmar e integrar procesos de negocio sin complicaciones. Te ofrecemos herramientas para automatizar y mejorar la gestión de documentación.",
+        tabs: procesosDeNegocioTabs,
+        content: procesosDeNegocioContent,
         buttonComponent: <DemoButton />
     }
 ];

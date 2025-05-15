@@ -20,7 +20,8 @@ const Header = () => {
     'Acreditaciones': 4,
     'Repositorio': 5,
     'Identificación digital': 6,
-    'Sobre nosotros': 7,
+    'Procesos de negocio': 7,
+    'Sobre nosotros': 8,
     // Añadir más mapeos según los topicServices disponibles en Home.js
   };
 
@@ -214,6 +215,10 @@ const Header = () => {
       description: (
           <>
             <div className="columns-container">
+              <p className={"descripcion-submenu"}>
+                Plataformas y herramientas para digitalizar, firmar e integrar procesos de negocio sin complicaciones. Te ofrecemos herramientas para automatizar y mejorar la gestión de documentación.
+              </p>
+
             </div>
           </>
       ),
@@ -242,7 +247,7 @@ const Header = () => {
                 Agenda una cita con nosotros para conocer más sobre nuestros servicios.
               </p>
               <button className={"boton-agenda"}>
-                Agenda Ahora
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cecilia.obando@idok.cl" target="_blank" rel="noopener noreferrer">Agenda Ahora</a>
               </button>
             </div>
           </>
@@ -410,7 +415,7 @@ const Header = () => {
           ) : (
               selectedService ? (
                   <>
-                    <h3>{selectedService.name}</h3>
+                    <h3 id={selectedService.name.toLowerCase().replace(/\s+/g, '-')}>{selectedService.name}</h3>
                     <p>{selectedService.description}</p>
                     <a href="#vermas" className="ver-mas-link" onClick={handleVerMasClick}>
                       Ver más <img src={"./flecha-ver-mas.png"} className={"flecha-ver-mas"} />

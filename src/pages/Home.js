@@ -41,16 +41,17 @@ const Home = () => {
 
     // Función para renderizar el detalle del topic
     const renderTopicDetail = (topic) => {
+        const topicSlug = topic.title.toLowerCase().replace(/\s+/g, '-');
         return (
-            <div className="container-detail">
+            <div className="container-detail" id={topicSlug}>
                 <div className='first-section'>
                     <div className='left-side'>
                         <h3>{topic.title}</h3>
                         <p>{topic.description}</p>
-                        <button>Agendar una cita con ventas</button>
+                        <button><a href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@idok.pe" target="_blank" rel="noopener noreferrer" >Agendar una cita con ventas</a></button>
                     </div>
                     <div className='right-side'>
-                        <img src='/imagenHomePeru.jpg' alt={topic.title} />
+                        <img src='/imagenHomePeru.jpg' alt={topic.title}/>
                     </div>
                 </div>
                 <div className='second-section'>
@@ -112,6 +113,20 @@ const Home = () => {
             }, 1000);
         }
     };
+
+    useEffect(() => {
+        if (showTopicDetail && activeTopicId) {
+            const activeTopic = getActiveTopic();
+            if (activeTopic) {
+                // Actualiza la URL con el slug del tema activo (convertido a minúsculas y con guiones)
+                const slug = activeTopic.title.toLowerCase().replace(/\s+/g, '-');
+                window.history.replaceState(null, '', `#${slug}`);
+            }
+        } else if (!showTopicDetail) {
+            // Si no hay tema activo, elimina el hashtag
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+    }, [showTopicDetail, activeTopicId]);
 
     // Añadimos este useEffect para detectar cuando se hace clic en el logo en Header.js
     useEffect(() => {
