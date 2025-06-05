@@ -8,7 +8,7 @@
 }
 
 .home-image {
-    background-image: url('/public/imagenHomePeru.jpg');
+    background-image: url('/public/HomeBGImage.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@
         }
         .right-side {
             img{
-                width: 65%;
+                width: 500px;
                 height: -webkit-fill-available;
             }
         }

@@ -51,7 +51,7 @@ const Home = () => {
                         <button><a href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@idok.pe" target="_blank" rel="noopener noreferrer" >Agendar una cita con ventas</a></button>
                     </div>
                     <div className='right-side'>
-                        <img src='/imagenHomePeru.jpg' alt={topic.title}/>
+                        <img src={topic.img} alt={topic.title}/>
                     </div>
                 </div>
                 <div className='second-section'>

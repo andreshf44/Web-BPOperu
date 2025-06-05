@@ -5,7 +5,7 @@
 }
 
 .home-first-section {
-    background-image: url('/public/imagenHomePeru.jpg');
+    background-image: url('/public/HomeBGImage.jpg');
     background-color: rgba(58, 68, 80, 0.77);
     background-blend-mode: overlay;
     background-size: cover;

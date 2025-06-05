@@ -393,6 +393,7 @@ export const topicServices = [
         title: "Certificados Digitales",
         description: "Proporcionamos distintos tipo de certificados digitales, asegurando la validez legal y la protección de tus documentos firmados electrónicamente. Garantizamos cumplimiento normativo y seguridad en cada transacción digital.",
         tabs: certificadosTabs,
+        img: "/standard-quality-control-concept-m (1) 1.png",
         content: certificadosContent,
         buttonComponent: <DemoButton />
     },
@@ -401,6 +402,7 @@ export const topicServices = [
         title: "Firma remota",
         description: "Facilitamos la firma de documentos a distancia mediante plataformas seguras, lo que permite la validación juridica de acuerdos y contratos sin necesidad de presencia física. Optimiza tiempos, reduce costos y mejora la eficiencia operativa.",
         tabs: firmaTabs,
+        img: "/crop-boss-employee-coworking 1.png",
         content: firmaContent,
         buttonComponent: <DemoButton />
     },
@@ -409,6 +411,7 @@ export const topicServices = [
         title: "Sellos de tiempo",
         description: "Garantizamos la integridad y autenticidad de documentos digitales mediante sellos de tiempo, protegiendo la información contra alteraciones y asegurando su validez a largo plazo en entornos electrónicos.",
         tabs: sellosTabs,
+        img: "planner-calendar-schedule-date-concept 1.png",
         content: sellosContent,
         buttonComponent: <DemoButton />
     },
@@ -417,6 +420,7 @@ export const topicServices = [
         title: "Acreditaciones",
         description: "Nuestros certificados digitales de firma avanzada, firma remota y sellos de tiempo cumplen con todos los requisitos de seguridad exigidos por la normativa local y se encuentran alineados a estándares internacionales. Asimismo, se encuentran dentro del alcance de acreditación del INDECOPI.",
         tabs: acreditacionesTabs,
+        img: "standard-quality-control-concept-m-b.jpg",
         content: acreditacionesContent
     },
     {
@@ -424,6 +428,7 @@ export const topicServices = [
         title: "Repositorio",
         description: "Encuentras nuestras políticas y prácticas que dirigen nuestras operaciones como prestadores de servicios digitales. Esta información siempre se encuentra disponible y actualizada para todos nuestros usuarios",
         tabs: repositorioTabs,
+        img: "hand-using-laptop-computer-with-virtual-screen-document-online-approve-paperless-quality-assurance-erp-management-concept 1.png",
         content: repositorioContent
     },
     {
@@ -431,6 +436,7 @@ export const topicServices = [
         title: "Identificación digital",
         description: "Implementamos soluciones avanzadas para autenticar y verificar la identidad de personas en entornos digitales, asegurando procesos de validación rápidos, seguros y fáciles de integrar en cualquier plataforma.",
         tabs: identificacionDigitalTabs,
+        img: "face-recognition-personal-identification-collage 1.png",
         content: identificacionDigitalContent,
         buttonComponent: <DemoButton />
     },
@@ -439,6 +445,7 @@ export const topicServices = [
         title: "Optimización de procesos",
         description: "Plataformas y herramientas para digitalizar, firmar e integrar procesos de negocio sin complicaciones. Te ofrecemos herramientas para automatizar y mejorar la gestión de documentación.",
         tabs: procesosDeNegocioTabs,
+        img: "hand-using-laptop-computer-with-virtual-screen-document-online-approve-paperless-quality-assurance-erp-management-concept 1.png",
         content: procesosDeNegocioContent,
         buttonComponent: <DemoButton />
     }
