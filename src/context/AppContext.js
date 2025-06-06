@@ -12,12 +12,16 @@ export const AppProvider = ({ children }) => {
     // Estado para controlar si se debe mostrar el detalle en Home
     const [showTopicDetail, setShowTopicDetail] = useState(false);
 
+    // Nuevo estado para manejar la pestaña activa
+    const [activeTabIndex, setActiveTabIndex] = useState(0);
+
     // Referencia para controlar si hay una transición en curso
     const isTransitioning = useRef(false);
 
     // Función para activar un topic específico en Home
-    const activateTopic = (topicId) => {
+    const activateTopic = (topicId, tabIndex = 0) => {
         setActiveTopicId(topicId);
+        setActiveTabIndex(tabIndex); // Establecer la pestaña activa
         setShowTopicDetail(true);
         setHasScrolled(true);
     };
@@ -37,6 +41,7 @@ export const AppProvider = ({ children }) => {
         setTimeout(() => {
             // Reestablecemos el estado de transición
             isTransitioning.current = false;
+            setActiveTabIndex(0); // Resetear la pestaña activa
         }, 2000);
     };
 
@@ -45,7 +50,9 @@ export const AppProvider = ({ children }) => {
         activeTopicId,
         hasScrolled,
         showTopicDetail,
+        activeTabIndex,
         setHasScrolled,
+        setActiveTabIndex,
         activateTopic,
         deactivateTopic
     };

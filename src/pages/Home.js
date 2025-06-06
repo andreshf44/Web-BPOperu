@@ -6,8 +6,15 @@ import topicServices from "../data/topicContent";
 import HomeContent from '../components/HomeContent';
 
 const Home = () => {
-    const { hasScrolled, activeTopicId, showTopicDetail, deactivateTopic } = useContext(AppContext);
-    const [activeTabIndex, setActiveTabIndex] = useState(0);
+    const {
+        hasScrolled,
+        activeTopicId,
+        showTopicDetail,
+        deactivateTopic,
+        activeTabIndex,
+        setActiveTabIndex
+    } = useContext(AppContext);
+
     const [isTopicFadingOut, setIsTopicFadingOut] = useState(false);
     const [isHomeImageVisible, setIsHomeImageVisible] = useState(true);
 

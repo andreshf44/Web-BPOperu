@@ -25,6 +25,17 @@ const Header = () => {
     // Añadir más mapeos según los topicServices disponibles en Home.js
   };
 
+  // Mapeo para las pestañas específicas dentro de cada topic
+  const serviceToTabMap = {
+    'persona-natural': { topicId: 1, tabIndex: 1 }, // "Persona natural" está en el índice 1 del topic 1
+    'representante-legal': { topicId: 1, tabIndex: 2 },
+    'empleado': { topicId: 1, tabIndex: 3 },
+    'abogado': { topicId: 1, tabIndex: 4 },
+    'contador': { topicId: 1, tabIndex: 4 },
+    'medico': { topicId: 1, tabIndex: 4 },
+    'otros-profesionales': { topicId: 1, tabIndex: 4 }
+  };
+
 
   // Datos de los servicios
 
@@ -91,26 +102,26 @@ const Header = () => {
               <div className="column">
                 <h4>Para ciudadanos</h4>
                 <ul>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Persona natural</a></li>
+                  <li><a href={"#persona-natural"} onClick={(e) => handleSpecificTopicClick(e, 'persona-natural')}>Persona natural</a></li>
                 </ul>
               </div>
               {/* Columna 2 */}
               <div className="column">
                 <h4>Para empresas</h4>
                 <ul>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Representante legal</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Empleado</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Agente automatizado</a></li>
+                  <li><a href={"#representante-legal"}  onClick={(e) => handleSpecificTopicClick(e, 'representante-legal')}>Representante legal</a></li>
+                  <li><a href={"#empleado"}  onClick={(e) => handleSpecificTopicClick(e, 'empleado')}>Empleado</a></li>
+                  <li><a href={"#empleado"}  onClick={(e) => handleSpecificTopicClick(e, 'empleado')}>Agente automatizado</a></li>
                 </ul>
               </div>
               {/* Columna 3 */}
               <div className="column">
                 <h4>Para profesionales</h4>
                 <ul>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Abogado</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Contador</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Médico</a></li>
-                  <li><a href={"./Placeholder-PDF.pdf"} target={"_blank"}>Otros profesionales</a></li>
+                  <li><a href={"#abogado"}  onClick={(e) => handleSpecificTopicClick(e, 'abogado')}>Abogado</a></li>
+                  <li><a href={"#contador"}  onClick={(e) => handleSpecificTopicClick(e, 'contador')}>Contador</a></li>
+                  <li><a href={"#medico"}  onClick={(e) => handleSpecificTopicClick(e, 'medico')}>Médico</a></li>
+                  <li><a href={"#otros-profesionales"}  onClick={(e) => handleSpecificTopicClick(e, 'otros-profesionales')}>Otros profesionales</a></li>
                 </ul>
               </div>
             </div>
@@ -317,6 +328,19 @@ const Header = () => {
         // Para otros servicios, activamos el topic correspondiente
         activateTopic(serviceToTopicMap[selectedService.name]);
       }
+    }
+  };
+
+  // Nueva función para manejar clics en enlaces específicos de certificados
+  const handleSpecificTopicClick = (e, slug) => {
+    e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+
+    const mapping = serviceToTabMap[slug];
+    if (mapping) {
+      // Activar el topic específico con la pestaña correspondiente
+      activateTopic(mapping.topicId, mapping.tabIndex);
+      // Cerrar el menú
+      setIsMenuVisible(false);
     }
   };
 
