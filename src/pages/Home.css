@@ -2,9 +2,7 @@
 
 .home {
     width: 100%;
-    height: 100vh;
-    position: relative;
-    padding-top: 43px;
+    height: 98vh;
 }
 
 .home-image {
@@ -13,18 +11,15 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 96%;
+    height: 100%;
     opacity: 1;
-    transition: opacity 1s ease;
+    transition: 0.8s;
 }
 
 /* Clase para animar la imagen cuando está oculta */
 .home-image.hidden {
     opacity: 0;
-}
-
-.home.content-wrapper {
-
+    height: 0;
 }
 
 /*   TopicDetail CSS  */

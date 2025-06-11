@@ -356,7 +356,6 @@ const Header = () => {
             alt="Logo"
             className="logo"
             onClick={deactivateTopic}  // Esta función ahora iniciará la transición de fade out
-            style={{cursor: 'pointer'}}
         />
       </div>
 

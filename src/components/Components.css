@@ -9,39 +9,49 @@
 }
 .header {
   background-color: #ffffff;
-  padding: 10px 0px;             /* Espaciado superior e inferior */
-  text-align: center;          /* Centra el contenido dentro del header */
-  position: fixed;             /* Fija el header en la parte superior */
-  top: 0;                      /* Fija el header al tope de la ventana */
-  width: 100%;                 /* Asegura que el header cubra todo el ancho */
-  z-index: 9;               /* Asegura que el header esté por encima de otros elementos */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera debajo del header */
+  /* padding: 10px 0px; */
+  /* text-align: center; */
+  height: 9vh;
+  /* position: fixed; */
+  /* top: 0; */
+  width: 100%;
+  z-index: 9;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   transition: 0.3s;
+  .logo-container {
+    height:-webkit-fill-available;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      width: 140px;
+    }       
+  }
 }
 
-.logo-container {
-  display: flex;
-  justify-content: center;     
-  align-items: center;  
-  .logo {
-    width: 140px;
-    height: auto;                
-    transition: 0.3s;
-  }       
-}
+
 
 .header.scrolled {
-  width: 95vw;
+  position: fixed;
+  height: 12vh;
+  /* width: 95vw; */
+  top: 0;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0px 40px;
+  /* margin: 0; */
+  /* padding: 0px 40px; */
   align-items: center;
+  .logo-container{
+    margin-left: 25px;
+    justify-content:left;
+  }
 
   nav.navbar {
+    display: flex;
+    height: -webkit-fill-available;
     width: -webkit-fill-available;
-
     ul {
       list-style-type: none; /* Elimina los puntos de la lista */
       padding: 0;
@@ -51,17 +61,16 @@
       justify-content: flex-start;
 
       li {
-        display: grid;
+        display: flex;
         margin: 0 20px;
         padding: 18px;
         text-align: left;
-        align-items: end;
-
+        align-items: center;
         a {
           display: inline-block;
           text-decoration: none;
           color: #5F5F5F;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 300;
           line-height: 24.54px;
           transition: color 0.3s;
@@ -106,19 +115,19 @@
 /*}*/
 
 .container-menu {
-  display: flex; 
+  display: flex;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease;
   position: fixed;
   border-top: 2px solid #ededed;
   height: auto;
+  max-height: 70vh;
+  overflow: auto;
   width: 100vw;
   background: white;
-  top: 64px;
+  top: 12vh;
   right: 0;
-  padding: 0;
-  gap: 124px;
   .option-menu { /* OPCIONES SUB MENU*/
     width: 300px;
     border-right: 2px solid #ededed;
@@ -135,7 +144,7 @@
           text-decoration: none;
           height: auto;
           padding-left: 50px;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 300;
           color: #707070;
           cursor: pointer;
@@ -161,7 +170,7 @@
     .placeholder-text {
       align-self: center;
       color: #555555;
-      font-size: 25px;
+      font-size: 18px;
     }
 
     .ver-mas-link {
@@ -180,7 +189,7 @@
 
     h3 {
       text-align: left;
-      font-size: 25px;
+      font-size: 24px;
       font-weight: 500;
       margin-bottom: 0px;
       color: #5f5f5f;
@@ -254,16 +263,21 @@
           align-items: center;
           justify-content: center;
           font-family: seravek-web, sans-serif;
-          width: 250px;
+          width: 180px;
+          border: none;
           background: #4b69b2;
           color: white;
-          font-size: 20px;
-          padding: 15px 30px;
+          font-size: 14px;
+          padding: 10px;
           border-radius: 10px;
           a {
             color: white;
             text-decoration: none;
           }
+        }
+        .boton-agenda:hover{
+          box-shadow: 0 4px 8px 4px rgb(0 0 0 / 18%);
+          background: #6382cd;
         }
       }
       a{
@@ -274,15 +288,12 @@
   }
 }
 
-.container-menu.expanded {
-  height: 450px;
-}
-
 .header.scrolled.visible .container-menu {
   visibility: visible;
   opacity: 1;
   padding: 0;
   transition:ease-in;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
   .option-menu{
     li{
       display: none;
@@ -339,13 +350,13 @@
 .info-section h2 {
   text-align: left;
   margin-bottom: 0;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 300;
 }
 
 .main-description {
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 

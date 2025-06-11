@@ -144,16 +144,16 @@ const Home = () => {
     }, [showTopicDetail, activeTopicId]);
 
     return (
-        <div className={`home ${hasScrolled && showTopicDetail ? 'show-topic-detail' : ''}`}>
-            {!hasScrolled && (
-                <div className={`home-image ${!isHomeImageVisible ? 'hidden' : ''}`}>
-                </div>
-            )}
-            {hasScrolled && !showTopicDetail && (
-                <div className={`home-content-wrapper ${!isHomeImageVisible ? 'hidden' : ''}`}>
-                    <HomeContent />
-                </div>
-            )}
+        <div className={`home`}>
+           
+            <div className={`home-image ${hasScrolled ? 'hidden' : ''}`}>
+            </div>
+            
+          
+            <div className={`home-content-wrapper ${!hasScrolled ? 'hidden' : ''}`}>
+                <HomeContent />
+            </div>
+            
 
             {/* Renderizamos el topic detail si está activo o está en transición de salida */}
             {hasScrolled && (showTopicDetail || isTopicFadingOut) && getActiveTopic() && (
