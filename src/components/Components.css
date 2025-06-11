@@ -37,6 +37,7 @@
   height: 12vh;
   /* width: 95vw; */
   top: 0;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -46,6 +47,7 @@
   .logo-container{
     margin-left: 25px;
     justify-content:left;
+    cursor: pointer;
   }
 
   nav.navbar {
@@ -258,27 +260,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        .boton-agenda {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: seravek-web, sans-serif;
-          width: 180px;
-          border: none;
-          background: #4b69b2;
-          color: white;
-          font-size: 14px;
-          padding: 10px;
-          border-radius: 10px;
-          a {
-            color: white;
-            text-decoration: none;
-          }
-        }
-        .boton-agenda:hover{
-          box-shadow: 0 4px 8px 4px rgb(0 0 0 / 18%);
-          background: #6382cd;
-        }
       }
       a{
         display: flex;
@@ -288,6 +269,9 @@
   }
 }
 
+.header.scrolled.visible {
+  box-shadow: none;
+}
 .header.scrolled.visible .container-menu {
   visibility: visible;
   opacity: 1;

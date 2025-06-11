@@ -28,6 +28,29 @@
   color: #61dafb;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: seravek-web, sans-serif;
+  min-width: 180px;
+  border: none;
+  background: #4b69b2;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  a {
+    font-size: 16px;
+    color: white !important;
+    text-decoration: none;
+  } 
+}
+button:hover{
+  box-shadow: 0 4px 8px 4px rgb(0 0 0 / 18%);
+  background: #6382cd;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
