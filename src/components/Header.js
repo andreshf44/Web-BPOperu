@@ -347,7 +347,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''} ${isMenuVisible ? 'visible' : ''}`}
+    <header className={`header ${scrolled || menuOpen ? 'scrolled' : ''} ${isMenuVisible ? 'visible' : ''}`}
     onMouseLeave={handleMouseLeave}
     >
       <div className="logo-container">
