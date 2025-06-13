@@ -13,6 +13,8 @@ const Header = () => {
 
   const { setHasScrolled, activateTopic } = useContext(AppContext);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const serviceToTopicMap = {
     'Certificados digitales': 1,
     'Firma remota': 2,
@@ -348,7 +350,6 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''} ${isMenuVisible ? 'visible' : ''}`}
     onMouseLeave={handleMouseLeave}
     >
-
       <div className="logo-container">
         {/* Cambiamos la imagen según el estado del scroll */}
         <img
@@ -357,10 +358,18 @@ const Header = () => {
             className="logo"
             onClick={deactivateTopic}  // Esta función ahora iniciará la transición de fade out
         />
+
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className={menuOpen ? "bar top open" : "bar top"}></span>
+          <span className={menuOpen ? "bar middle open" : "bar middle"}></span>
+          <span className={menuOpen ? "bar bottom open" : "bar bottom"}></span>
+        </div>
       </div>
 
-      {scrolled && (  // Solo mostramos el menú cuando hay scroll
-          <nav className="navbar">
+   
+
+      {(scrolled || menuOpen) &&  (  // Solo mostramos el menú cuando hay scroll
+          <nav className={`navbar ${menuOpen ? "active" : ""}`}>
             <ul>
               <li
                   className={`nav-item ${activeMenuItem === 1 ? 'active' : ''}`}
