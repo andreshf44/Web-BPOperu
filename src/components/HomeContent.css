@@ -99,6 +99,7 @@
                 display: flex;
                 flex-direction: row;
                 margin-bottom: 50px;
+                align-items: center;
                 .bulletin-main-content {
                     width: 60%;
                     padding: 20px 0 40px 40px;
