@@ -555,7 +555,7 @@
       padding: 10px 0 60px 0;
       flex-wrap: wrap;
       width: 50vh;
-      justify-content: flex-start !important;
+      justify-content: space-between !important;
       .simbol {
         width: 25vw;
         padding: 0;
@@ -679,6 +679,102 @@
     }
   }
  
+}
+@media (max-width:420px) and (orientation: portrait){
+  .header.scrolled {
+    nav.navbar {
+      ul{
+        gap: 0px;
+      }
+    }
+  }
+  .home {
+    .home-second-section {
+      .simbols-container {
+        .simbol {
+          width: 20vw;
+        }
+      }
+    }
+    .topic-detail-overlay {
+      .container-detail {
+        .second-section {
+          .right-side {
+            width: 50vw;
+            .information{
+              h3 {
+                font-size: 30px;
+              }        
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:395px) and (orientation: portrait){
+  .header.scrolled {
+    nav.navbar {
+      ul {
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .container-menu.expanded {
+      top: 17vh;
+      max-height: 80vh;
+      .option-menu {
+        ul {
+          li {
+            height: 6vh;
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home{
+    .home-content-wrapper {
+      .home-third-section {
+        .content-third-section {
+          h2 {
+            width: 95vw !important;
+            font-size: 25px !important;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .topic-detail-overlay {
+      .container-detail {
+        .first-section {
+          .left-side{
+            h3{
+              font-size: 25px;
+            }
+          }
+          .right-side {
+            width: 40vw;
+          }
+        }
+        .second-section{
+          .right-side{
+            .information {
+              h3 {
+                  font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 /*----------FIN Menu Header Responsive----------*/
 
