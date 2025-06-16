@@ -420,7 +420,7 @@ const Header = () => {
 
 
       {/* Contenedor para las dos columnas */}
-      <div className={`container-menu ${activeMenuItem !== 1 ? 'expanded' : ''}`}>
+      <div className={`container-menu ${activeMenuItem !== 0 ? 'expanded' : ''}`}>
         {activeMenuItem !== 1 && (<div className="option-menu">
           <ul>
             {services.map((service) => (

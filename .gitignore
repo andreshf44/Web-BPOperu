@@ -1,6 +1,8 @@
-# Ignorar los archivos generados por Babel
+# Ignorar archivos de caché generados automáticamente
+node_modules/
 node_modules/.cache/
-
-# Ignorar otros archivos de caché
 node_modules/.cache/default-development/
+node_modules/.cache/.eslintcache
+
+# Variables de entorno
 .env

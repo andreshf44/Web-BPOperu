@@ -439,7 +439,7 @@
       transition: 0.3s;
       ul{
         li{
-          padding: 0 !important;
+          padding: 10px !important;
         }
       }
     }
@@ -490,6 +490,7 @@
     }
     .container-menu {
       visibility: hidden !important;
+      max-height: 60vh;
       .option-menu {
         width: 30vw;
         li.active {
@@ -498,13 +499,49 @@
           }
         }
       }
-      .content-option {
-        width: 75%;
-      }
      
     }
     .container-menu.expanded{
-      visibility: visible;
+      visibility: visible !important;
+      display: flex;
+      flex-direction: column;
+      .company-info-content{
+        height: auto;
+        .info-section {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+      .option-menu{
+        width: auto;
+        border-right: none;
+        border-bottom: 2px solid #ededed;
+        ul{
+          display: flex;
+          align-items: center;
+          li{
+            padding: 25px;
+            height: auto;
+            margin: 0;
+            a{
+              padding-left: 0;
+            }
+          }
+        }
+      }
+      .content-option {
+        min-height: 10vh;
+        width: auto;
+        padding: 10px 25px;
+        .ver-mas-link {
+          padding-bottom: 20px;
+          padding-right: 8px;
+        }
+        .descripcion-submenu {
+          padding-right: 0;
+        }
+      }
+     
     }
   
   }
