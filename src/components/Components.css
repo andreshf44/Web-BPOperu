@@ -612,7 +612,6 @@
     display: none;
   }
 }
-
 @media (max-width:460px) and (orientation: portrait){
   .header.scrolled {
     height: 18vh;
@@ -775,6 +774,50 @@
     }
   }
 
+}
+
+
+@media (max-width: 1140px) and (orientation: landscape){
+  .header.scrolled {
+    nav.navbar {
+      ul {
+        li {
+          padding: 6px;
+        }
+      }
+    }
+    .container-menu.expanded {
+      left: 0;
+    }
+  }
+  .home{
+    .home-content-container{
+      .home-first-section {
+        h2 {
+            padding: 18px 0 20px 0;
+        }
+      }
+      .home-second-section {
+        .simbols-container {
+          .simbol {
+            padding: 0 40px;
+          }
+        }
+      }
+    }
+    .topic-detail-overlay {
+      .container-detail{
+        .first-section{
+          .right-side {
+            width: 30vw;
+            img{
+              width: -webkit-fill-available;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 /*----------FIN Menu Header Responsive----------*/
 
