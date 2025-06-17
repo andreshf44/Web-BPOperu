@@ -126,6 +126,7 @@
   height: auto;
   max-height: 70vh;
   overflow: auto;
+  scroll-behavior: smooth;
   width: 100vw;
   background: white;
   top: 12vh;
@@ -269,6 +270,19 @@
       }
     }
   }
+}
+.container-menu::-webkit-scrollbar {
+  width: 8px;              /* ancho de la barra vertical */
+  height: 8px;             /* alto de la barra horizontal si aplica */
+}
+.container-menu::-webkit-scrollbar-track {
+  background: transparent; /* o un color suave si deseas fondo */
+}
+.container-menu::-webkit-scrollbar-thumb {
+  background-color: #4b69b2;
+  border-radius: 8px;
+  border: 2px solid transparent; /* para generar espacio interno */
+  background-clip: content-box;
 }
 
 .header.scrolled.visible {

@@ -33,13 +33,28 @@
     top: 12vh;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: -webkit-fill-available;
     background-color: white;
     overflow-y: auto;
+    scroll-behavior: smooth;
     padding-top: 80px; /* Espacio para el header */
     opacity: 1;
     transition: opacity 1s ease;
 }
+.topic-detail-overlay::-webkit-scrollbar {
+    width: 12px;              /* ancho de la barra vertical */
+    height: 8px;             /* alto de la barra horizontal si aplica */
+} 
+.topic-detail-overlay::-webkit-scrollbar-track {
+    background: transparent; /* o un color suave si deseas fondo */
+}
+.topic-detail-overlay::-webkit-scrollbar-thumb {
+    background-color: #4b69b2;
+    border-radius: 8px;
+    border: 2px solid transparent; /* para generar espacio interno */
+    background-clip: content-box;
+}
+  
 
 /* Clase para la transición de salida */
 .topic-detail-overlay.fade-out {
