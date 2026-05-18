@@ -408,6 +408,7 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 3; /* Por si hay overlays */
+  transition: 0.3s;
   .bar {
     height: 4px;
     width: 100%;
@@ -436,7 +437,7 @@
 
   .header {
     position: fixed;
-    height: 12vh;
+    height: auto !important;
     top: 0;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
     background-color: #fff;
@@ -459,9 +460,13 @@
     }
     .navbar.active{
       display: flex !important;
-      height: -webkit-fill-available;
+      height: auto !important;
       width: -webkit-fill-available;
         ul {
+          flex-direction: column;
+          background: #fff;
+          z-index: 1;
+          position: absolute;
           list-style-type: none; 
           padding: 0;
           padding-left: 0px !important;
@@ -504,7 +509,10 @@
     }
     .container-menu {
       visibility: hidden !important;
-      max-height: 60vh;
+      max-height: 100vh;
+      top: 0;
+      height: 100vh;
+      z-index: 2;
       .option-menu {
         width: 30vw;
         li.active {
@@ -518,7 +526,7 @@
     .container-menu.expanded{
       visibility: visible !important;
       display: flex;
-      flex-direction: column;
+      align-items: flex-start;
       .company-info-content{
         height: auto;
         .info-section {
@@ -531,8 +539,6 @@
         border-right: none;
         border-bottom: 2px solid #ededed;
         ul{
-          display: flex;
-          align-items: center;
           li{
             padding: 25px;
             height: auto;

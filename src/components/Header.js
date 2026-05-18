@@ -333,6 +333,17 @@ const Header = () => {
     }
   };
 
+  const handleLinkClick = (e) => {
+    handleVerMasClick(e);
+    setMenuOpen(false);
+    setActiveMenuItem(0);
+  };
+
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen);
+    setActiveMenuItem(0);
+  }
+
   // Nueva función para manejar clics en enlaces específicos de certificados
   const handleSpecificTopicClick = (e, slug) => {
     e.preventDefault(); // Previene el comportamiento predeterminado del enlace
@@ -359,18 +370,16 @@ const Header = () => {
             onClick={deactivateTopic}  // Esta función ahora iniciará la transición de fade out
         />
 
-        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        <div className="menu-icon" onClick={handleMenuClick}>
           <span className={menuOpen ? "bar top open" : "bar top"}></span>
           <span className={menuOpen ? "bar middle open" : "bar middle"}></span>
           <span className={menuOpen ? "bar bottom open" : "bar bottom"}></span>
         </div>
       </div>
 
-   
-
       {(scrolled || menuOpen) &&  (  // Solo mostramos el menú cuando hay scroll
-          <nav className={`navbar ${menuOpen ? "active" : ""}`}>
-            <ul>
+        <nav className={`navbar ${menuOpen ? "active" : ""}`}>
+          <ul>
               <li
                   className={`nav-item ${activeMenuItem === 1 ? 'active' : ''}`}
                   onMouseEnter={() => handleMouseEnter(1)}
@@ -449,7 +458,7 @@ const Header = () => {
                   <>
                     <h3 id={selectedService.name.toLowerCase().replace(/\s+/g, '-')}>{selectedService.name}</h3>
                     <p>{selectedService.description}</p>
-                    <a href="#vermas" className="ver-mas-link" onClick={handleVerMasClick}>
+                    <a href="#vermas" className="ver-mas-link" onClick={handleLinkClick}>
                       Ver más <img src={"./flecha-ver-mas.png"} className={"flecha-ver-mas"} />
                     </a>
                   </>
