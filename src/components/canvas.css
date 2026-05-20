@@ -4,6 +4,7 @@
     width: 50%;
     top: 30%;
     left: 25%;
+    z-index: 1;
 }
 
 .canvas.scrolled {

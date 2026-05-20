@@ -146,11 +146,9 @@ const Home = () => {
     return (
         <div className={`home`}>
            
-            <div className={`home-image ${hasScrolled ? 'hidden' : ''}`}>
-            </div>
-            
-          
-            <div className={`home-content-wrapper ${!hasScrolled ? 'hidden' : ''}`}>
+            <div className={`home-image ${hasScrolled ? 'fade-out-image' : 'fade-in-image'}`}></div>
+
+            <div className={`home-content-wrapper ${hasScrolled ? 'md:fade-in-content' : 'md:fade-out-content'}`}>
                 <HomeContent />
             </div>
             
