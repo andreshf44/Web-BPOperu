@@ -9,7 +9,7 @@ const Header = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false); // Estado para controlar la visibilidad del menu
   const [activeService, setActiveService] = useState(null); // Para gestionar el servicio activo
   const [activeMenuItem, setActiveMenuItem] = useState(null);
-  const [isCountriesVisible, setIsCountriesVisible] = useState(false);// Estado para manejar la visibilidad de la lista de países
+  /*const [isCountriesVisible, setIsCountriesVisible] = useState(false);// Estado para manejar la visibilidad de la lista de países*/
 
   const { setHasScrolled, activateTopic } = useContext(AppContext);
 

@@ -10,41 +10,21 @@ const Home = () => {
         hasScrolled,
         activeTopicId,
         showTopicDetail,
-        deactivateTopic,
         activeTabIndex,
         setActiveTabIndex
     } = useContext(AppContext);
 
-    const [isTopicFadingOut, setIsTopicFadingOut] = useState(false);
-    const [isHomeImageVisible, setIsHomeImageVisible] = useState(true);
+    const [isTopicFadingOut] = useState(false);
 
     // Función para cambiar la pestaña activa
     const handleTabClick = (index) => {
         setActiveTabIndex(index);
     };
 
-    useEffect(() => {
-        if (showTopicDetail) {
-            // Cuando se muestra un topic, ocultamos la imagen de inicio
-            setIsHomeImageVisible(false);
-            setIsTopicFadingOut(false);
-        } else if (!showTopicDetail && isTopicFadingOut) {
-            // Cuando termina la transición de salida del topic
-            setIsTopicFadingOut(false);
-        }
-    }, [showTopicDetail, isTopicFadingOut]);
-
     // Reiniciamos la pestaña activa cuando cambia el topic
     useEffect(() => {
         setActiveTabIndex(0);
-    }, [activeTopicId]);
-
-
-    // Función para obtener las pestañas según el topic activo
-    const getActiveTabs = () => {
-        const activeTopic = topicServices.find(topic => topic.id === activeTopicId);
-        return activeTopic ? activeTopic.tabs : [];
-    };
+    }, [activeTopicId, setActiveTabIndex]);
 
     // Función para renderizar el detalle del topic
     const renderTopicDetail = (topic) => {
@@ -110,7 +90,7 @@ const Home = () => {
         return topicServices.find(topic => topic.id === activeTopicId);
     };
 
-    const handleTopicClose = () => {
+    /*const handleTopicClose = () => {
         if (showTopicDetail) {
             setIsTopicFadingOut(true);
             // Esperamos a que termine la animación antes de ocultar realmente el topic
@@ -119,11 +99,13 @@ const Home = () => {
                 deactivateTopic();
             }, 1000);
         }
-    };
+    };*/
 
     useEffect(() => {
         if (showTopicDetail && activeTopicId) {
-            const activeTopic = getActiveTopic();
+            const activeTopic = topicServices.find(
+                topic => topic.id === activeTopicId
+            );
             if (activeTopic) {
                 // Actualiza la URL con el slug del tema activo (convertido a minúsculas y con guiones)
                 const slug = activeTopic.title.toLowerCase().replace(/\s+/g, '-');
@@ -132,14 +114,6 @@ const Home = () => {
         } else if (!showTopicDetail) {
             // Si no hay tema activo, elimina el hashtag
             window.history.replaceState(null, '', window.location.pathname);
-        }
-    }, [showTopicDetail, activeTopicId]);
-
-    // Añadimos este useEffect para detectar cuando se hace clic en el logo en Header.js
-    useEffect(() => {
-        // Si estaba mostrando un topic y ahora no, entonces se hizo clic en el logo
-        if (!showTopicDetail && activeTopicId) {
-            setIsHomeImageVisible(true);
         }
     }, [showTopicDetail, activeTopicId]);
 
