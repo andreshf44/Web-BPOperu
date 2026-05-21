@@ -451,7 +451,7 @@
 
   .header {
     position: fixed;
-    height: auto !important;
+    height: 70px !important;
     top: 0;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
     background-color: #fff;
