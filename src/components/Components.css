@@ -140,21 +140,26 @@
       margin: 0;
       li {
         margin-bottom: 10px;
-        height: 45px;
-        padding-top: 24px;
-        a {
+        height: 60px;
+        padding-top: 0px;
+        button {
           display: flex;
           text-decoration: none;
           height: auto;
           padding-left: 50px;
           font-size: 18px;
           font-weight: 300;
+          background: transparent;
           color: #707070;
           cursor: pointer;
           justify-content: flex-start;
+          width: 100%;
+          height: 60px;
+          border-radius: 0;
         }
-        li:hover {
+        button:hover{
           background: #f6f6f6;
+          box-shadow: 0 4px 8px 4px rgb(0 0 0 / 18%);
         }
       }
       li:has(.active){
@@ -524,8 +529,9 @@
       z-index: 2;
       .option-menu {
         width: 30vw;
+        padding-top: 25px;
         li.active {
-          a{
+          button{
             padding-left: 25px;
           }
         }
@@ -549,13 +555,14 @@
         border-bottom: 2px solid #ededed;
         ul{
           li{
-            padding: 25px 0px 25px 15px;
+            padding: 0;
             height: auto;
             margin: 0;
             width: 155px;
             text-align: left;
-            a{
-              padding-left: 0;
+            button{
+              min-width: 0;
+              text-align: left;
             }
           }
         }
@@ -756,8 +763,7 @@
       .option-menu {
         ul {
           li {
-            height: 6vh;
-            a {
+            button {
               font-size: 14px;
             }
           }
