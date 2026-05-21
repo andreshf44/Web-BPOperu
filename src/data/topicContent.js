@@ -178,7 +178,7 @@ export const acreditacionesContent = [
                 />
                 <a
                     href={"/docs/111-AcreditaciónECdeBPO.pdf"}
-                    target={"_blank"} rel="noopener">Resolución de Acreditación Entidad de Certificación</a>
+                    target={"_blank"} rel="noopener noreferrer">Resolución de Acreditación Entidad de Certificación</a>
             </>
     },
     {
@@ -197,7 +197,7 @@ export const acreditacionesContent = [
                 />
                 <a
                     href={"/docs/RESOLUCION 125-AcreditacionTSABPO[F] .pdf"}
-                    target={"_blank"} rel="noopener">Resolución de Acreditación Sello de Tiempo</a>
+                    target={"_blank"} rel="noopener noreferrer">Resolución de Acreditación Sello de Tiempo</a>
             </>
     },
     {
@@ -215,7 +215,7 @@ export const acreditacionesContent = [
                 />
                 <a
                     href={"/docs/360- AcreditaciónFRemotadeBPO.pdf"}
-                    target={"_blank"} rel="noopener">Resolución de Firma Remota</a>
+                    target={"_blank"} rel="noopener noreferrer">Resolución de Firma Remota</a>
             </>
     },
 
@@ -233,8 +233,10 @@ export const repositorioContent = [
                         className="pdf-logo"
                     />
                     <a
-                    href={"/docs/01-Politica-y-Declaración-de-Practicas-de-Certificacion-de-BPO.pdf"}
-                    target={"_blank"} rel="noopener">Política y Declaración de Prácticas</a></li>
+                        href={"/docs/01-Politica-y-Declaración-de-Practicas-de-Certificacion-de-BPO.pdf"}
+                        target={"_blank"} rel="noopener noreferrer">Política y Declaración de Prácticas
+                    </a>
+                </li>
                 <li>
                     <img
                         src={"pdf_logo.png"}
@@ -242,8 +244,10 @@ export const repositorioContent = [
                         className="pdf-logo"
                     />
                     <a
-                    href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"}
-                    target={"_blank"} rel="noopener">Política y Plan de Seguridad</a></li>
+                        href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"}
+                        target={"_blank"} rel="noopener noreferrer">Política y Plan de Seguridad
+                    </a>
+                </li>
                 <li>
                     <img
                         src={"pdf_logo.png"}
@@ -252,7 +256,9 @@ export const repositorioContent = [
                     />
                     <a
                         href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"}
-                        target={"_blank"} rel="noopener">Política de Privacidad</a></li>
+                        target={"_blank"} rel="noopener noreferrer">Política de Privacidad
+                    </a>
+                </li>
             </ul>
         )
     },
@@ -268,7 +274,9 @@ export const repositorioContent = [
                     />
                     <a
                         href={"/docs/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"}
-                        target={"_blank"}>Política y Declaración de Prácticas</a></li>
+                        target={"_blank"} rel="noopener noreferrer">Política y Declaración de Prácticas
+                    </a>
+                </li>
                 <li>
                     <img
                         src={"pdf_logo.png"}
@@ -277,7 +285,7 @@ export const repositorioContent = [
                     />
                     <a
                         href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"}
-                        target={"_blank"}>Política y Plan de Seguridad</a></li>
+                        target={"_blank"} rel="noopener noreferrer">Política y Plan de Seguridad</a></li>
                 <li>
                     <img
                         src={"pdf_logo.png"}
@@ -286,7 +294,7 @@ export const repositorioContent = [
                     />
                     <a
                         href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"}
-                        target={"_blank"}>Política de Privacidad</a></li>
+                        target={"_blank"} rel="noopener noreferrer">Política de Privacidad</a></li>
             </ul>
         )
     },

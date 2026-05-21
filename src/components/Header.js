@@ -165,16 +165,16 @@ const Header = () => {
               <div className="column">
                 <h4>Acreditaciones</h4>
                 <ul>
-                  <li><a href={"/docs/111-AcreditaciónECdeBPO.pdf"} target={"_blank"} rel="noopener">Entidad de Certificación</a></li>
-                <li><a href={"/docs/RESOLUCION 125-AcreditacionTSABPO[F] .pdf"} target={"_blank"} rel="noopener">Sello de Tiempo</a></li>
-                <li><a href={"/docs/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"} target={"_blank"} rel="noopener">Servicio de Valor Añadido</a></li>
+                  <li><a href={"/docs/111-AcreditaciónECdeBPO.pdf"} target={"_blank"} rel="noopener noreferrer">Entidad de Certificación</a></li>
+                  <li><a href={"/docs/RESOLUCION 125-AcreditacionTSABPO[F] .pdf"} target={"_blank"} rel="noopener noreferrer">Sello de Tiempo</a></li>
+                  <li><a href={"/docs/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"} target={"_blank"} rel="noopener noreferrer">Servicio de Valor Añadido</a></li>
               </ul>
             </div>
             {/* Columna 2 */}
             <div className="column">
               <h4>Reconocimiento</h4>
               <ul>
-                <li><a href={"/docs/360- AcreditaciónFRemotadeBPO.pdf"} target={"_blank"} rel="noopener">Firma remota</a></li>
+                <li><a href={"/docs/360- AcreditaciónFRemotadeBPO.pdf"} target={"_blank"} rel="noopener noreferrer">Firma remota</a></li>
               </ul>
             </div>
 
@@ -191,18 +191,18 @@ const Header = () => {
               <div className="column">
                 <h4>Entidad de Certificación</h4>
                 <ul>
-                  <li><a href={"/docs/01-Politica-y-Declaración-de-Practicas-de-Certificacion-de-BPO.pdf"} target={"_blank"} rel="noopener">Política y Declaración de Prácticas</a></li>
-                  <li><a href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"} rel="noopener">Política y Plan de Seguridad</a></li>
-                  <li><a href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"} rel="noopener">Política de Privacidad</a></li>
+                  <li><a href={"/docs/01-Politica-y-Declaración-de-Practicas-de-Certificacion-de-BPO.pdf"} target={"_blank"} rel="noopener noreferrer">Política y Declaración de Prácticas</a></li>
+                  <li><a href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"} rel="noopener noreferrer">Política y Plan de Seguridad</a></li>
+                  <li><a href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"} rel="noopener noreferrer">Política de Privacidad</a></li>
                 </ul>
               </div>
               {/* Columna 2 */}
               <div className="column">
                 <h4>Autoridad de Sellado de Tiempo</h4>
                 <ul>
-                  <li><a href={"/docs/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"} target={"_blank"} rel="noopener">Política y Declaración de Prácticas</a></li>
-                  <li><a href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"} rel="noopener">Política y Plan de Seguridad</a></li>
-                  <li><a href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"} rel="noopener">Política de Privacidad</a></li>
+                  <li><a href={"/docs/01-Politica-y-Declaracion-de-Practicas-SVA-de-BPO.pdf"} target={"_blank"} rel="noopener noreferrer">Política y Declaración de Prácticas</a></li>
+                  <li><a href={"/docs/02-Politica-y-Plan-de-Seguridad-de-Informacion-EC-de-BPO.pdf"} target={"_blank"} rel="noopener noreferrer">Política y Plan de Seguridad</a></li>
+                  <li><a href={"/docs/03-Politica-y-Plan-de-Privacidad-EC-y-TSA-de-BPO.pdf"} target={"_blank"} rel="noopener noreferrer">Política de Privacidad</a></li>
                 </ul>
               </div>
             </div>
