@@ -270,25 +270,23 @@ const Header = () => {
 
 
   // Función que se llama cada vez que el usuario hace scroll
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setScrolled(true);  // Si se hizo scroll hacia abajo más de 50px, mostramos el logo scroll
-      setHasScrolled(true)
-    } else {
-      setScrolled(false); // Si estamos en la parte superior, mostramos el logo inicial
-      setHasScrolled(false);
-    }
-  };
-
-  // Usamos useEffect para agregar el listener de scroll cuando el componente se monta
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+        setHasScrolled(true);
+      } else {
+        setScrolled(false);
+        setHasScrolled(false);
+      }
+    };
+  
     window.addEventListener('scroll', handleScroll);
-
-    // Limpiamos el event listener cuando el componente se desmonta
+  
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll]);
+  }, [setHasScrolled]);
 
   // Función para actualizar el servicio seleccionado
   const handleServiceClick = (service) => {
